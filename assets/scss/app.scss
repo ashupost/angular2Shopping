@@ -1,0 +1,224 @@
+$mainColor: #0000AA;
+
+$widthDesktop: 70%;
+$widthTablet: 80%;
+$widthMobile: 90%;
+
+$fontSizeDesktop: 16px;
+$fontSizeTablet: 14px;
+$fontSizeMobile: 12px;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: $mainColor;
+  text-decoration: none;
+  font-family: "Roboto", Arial, sans-serif;
+  cursor: pointer;
+}
+
+a:hover,
+a:active {
+  border-bottom: 1px solid $mainColor;
+}
+
+.danger {
+  color: red;
+}
+
+.danger:hover,
+.danger:active {
+  border-bottom: 1px solid red;
+}
+
+header {
+  background-color: $mainColor;
+  width: 100%;
+  height: 60px;
+
+  nav {
+    width: $widthDesktop;
+    margin: auto;
+    font-size: 1.1em;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      vertical-align: middle;
+
+      li {
+        display: inline-block;
+        padding: 0 3px;
+        line-height: 70px;
+      }
+
+      li:first-of-type {
+        padding-left: 0;
+      }
+
+      li:last-of-type {
+        padding-right: 0;
+      }
+
+      li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        font-weight: bold;
+        border-bottom: 1px solid white;
+      }
+    }
+
+    .router-link-active {
+      font-weight: bold;
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.main {
+  width: $widthDesktop;
+  margin: 32px auto;
+}
+
+
+.master {
+  width: 40%;
+  float: left;
+}
+
+.detail {
+  width: calc(60% - 220px);
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.single {
+  display: block !important;
+}
+
+.recipe, .info {
+  font-family: Georgia, serif;
+
+  h1 {
+    margin: 0 0 30px 0;
+    display: inline-block;
+  }
+
+  .img {
+
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 2px #ccc;
+    }
+  }
+
+  .content {
+    margin: 20px 0;
+  }
+
+  .list li {
+    height: 20px;
+    cursor: default;
+  }
+
+  .list li:hover {
+    background-color: white;
+  }
+
+  .item-name {
+    width: 70%;
+  }
+
+  .item-amount {
+    width: 20%;
+  }
+}
+
+form {
+  font-family: "Roboto", Arial, sans-serif;
+
+  input, textarea {
+    border-radius: 3px;
+    resize: none;
+    border: 1px solid #ccc;
+    font-size: inherit;
+  }
+
+
+  .input {
+    margin: 5px 0;
+
+    label {
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+    }
+  }
+
+  .ng-invalid {
+    border: 1px solid red;
+  }
+}
+.bg-orange {
+  background-color: #ff851b !important;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: $fontSizeTablet;
+  }
+
+  header nav,
+  .main {
+    width: $widthTablet
+  }
+
+  .master {
+    width: 45%;
+  }
+
+  .detail {
+    width: calc(55% - 20px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .master,
+  .detail {
+    //display: none;
+  }
+
+  .master {
+    width: 100%;
+    float: none;
+  }
+
+  .detail {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: $fontSizeMobile;
+  }
+
+  header nav,
+  .main {
+    width: $widthMobile
+  }
+}

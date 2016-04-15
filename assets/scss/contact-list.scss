@@ -1,0 +1,16 @@
+ul{
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+}
+
+li:hover{
+  padding-left: 8px;
+  color: #0000ee;
+  border-left: 3px solid #0000AA;
+  font-weight: bold;
+}
+.clicked{
+  font-weight: bold;
+  color: #233DCB;
+}
