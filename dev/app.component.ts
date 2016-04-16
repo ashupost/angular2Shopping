@@ -14,6 +14,8 @@ import {WikiHttpMainComponent} from "./wiki-http/wiki-http.main.component";
 import {HierarchicalDependencyInjectionComponent} from "./hierarchical-dependency-injection/hierarchical-dependency-injection.component";
 import {BootstrapMainComponent} from "./bootstrap/bootstrap-main.component";
 import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-directive.app.component";
+import {BootstrapSecondComponent} from "./bootstrap/bootstrap-second.component";
+import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
 
 @Component({
     selector: 'my-app',
@@ -30,7 +32,7 @@ import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-di
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a [routerLink]="['Bootstrap-Third']">Home</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Click me for Menu <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -47,6 +49,7 @@ import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-di
                                 <li><a [routerLink]="['Wiki-Http']">Wiki-Http</a></li>
                                 <li><a [routerLink]="['Hierarchical-Dependency-Injection']">Hierarchical-DI</a></li>
                                 <li><a [routerLink]="['Bootstrap']">Bootstrap</a></li>
+                                <li><a [routerLink]="['Bootstrap-Second']">Bootstrap-Second</a></li>
                             </ul>
                         </li>
                         <li><a [routerLink]="['Attribute-Directive']">Attribute-Directive</a></li>
@@ -70,7 +73,7 @@ import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-di
 
 })
 @RouteConfig([
-    {path: '/recipes/...', name: 'Recipes', component: RecipesComponent, useAsDefault: true},
+    {path: '/recipes/...', name: 'Recipes', component: RecipesComponent},
 	{path: '/shopping-list', name: 'ShoppingList', component: ShoppingListComponent},
     {path: '/my-form', name: 'My-form', component: MyFormComponent},
     {path: '/di-demo', name: 'Di-demo', component: DIMasterComponent},
@@ -83,7 +86,9 @@ import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-di
     {path: '/wiki-http', name: 'Wiki-Http', component: WikiHttpMainComponent},
     {path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: HierarchicalDependencyInjectionComponent},
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
-    {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent}
+    {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent},
+    {path: '/bootstrap-second', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
+    {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
 ])
 export class AppComponent {
