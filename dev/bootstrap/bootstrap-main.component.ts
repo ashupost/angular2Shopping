@@ -18,6 +18,6 @@ export class BootstrapMainComponent implements   OnInit,    AfterViewInit
 
 
     ngOnInit():any {
-        console.log("ngOnInit");
+        console.log("ngOnInit..");
     }
 }

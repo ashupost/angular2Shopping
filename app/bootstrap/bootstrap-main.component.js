@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     console.log("ngAfterViewInit");
                 };
                 BootstrapMainComponent.prototype.ngOnInit = function () {
-                    console.log("ngOnInit");
+                    console.log("ngOnInit..");
                 };
                 BootstrapMainComponent = __decorate([
                     core_1.Component({
