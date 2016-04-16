@@ -9,4 +9,5 @@ System.register([], function(exports_1, context_1) {
         }
     }
 });
-//# sourceMappingURL=shopping-list.js.map
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vY2svc2hvcHBpbmctbGlzdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7UUFDVyxhQUFhOzs7O1lBQWIsMkJBQUEsYUFBYSxHQUFpQixFQUFFLENBQUEsQ0FBQyIsImZpbGUiOiJtb2NrL3Nob3BwaW5nLWxpc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0luZ3JlZGllbnR9IGZyb20gXCIuLi9zaGFyZWQvaW5ncmVkaWVudFwiO1xyXG5leHBvcnQgbGV0IFNIT1BQSU5HX0xJU1Q6IEluZ3JlZGllbnRbXSA9IFtdOyJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
