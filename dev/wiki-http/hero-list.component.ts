@@ -4,20 +4,7 @@ import {HeroService}       from './hero.service';
 
 @Component({
     selector: 'hero-list',
-    template: `
-  <h3>Heroes:</h3>
-  <ul>
-    <li *ngFor="#hero of heroes">
-      {{ hero.name }}
-    </li>
-  </ul>
-  New Hero:
-  <input #newHero />
-  <button (click)="addHero(newHero.value); newHero.value=''">
-    Add Hero
-  </button>
-  <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
-  `,
+    templateUrl: 'templates/wiki-http/hero-list.component.html',
     styles: ['.error {color:red;}']
 })
 export class HeroListComponent implements OnInit {

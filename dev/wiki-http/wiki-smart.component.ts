@@ -32,4 +32,3 @@ export class WikiSmartComponent {
         .distinctUntilChanged()
         .switchMap((term:string) => this._wikipediaService.search(term));
 }
-
