@@ -13,6 +13,7 @@ import {JqueryComponent} from "./jquery/jquery.component";
 import {WikiHttpMainComponent} from "./wiki-http/wiki-http.main.component";
 import {HierarchicalDependencyInjectionComponent} from "./hierarchical-dependency-injection/hierarchical-dependency-injection.component";
 import {BootstrapMainComponent} from "./bootstrap/bootstrap-main.component";
+import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-directive.app.component";
 
 @Component({
     selector: 'my-app',
@@ -48,7 +49,7 @@ import {BootstrapMainComponent} from "./bootstrap/bootstrap-main.component";
                                 <li><a [routerLink]="['Bootstrap']">Bootstrap</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Page 2</a></li>
+                        <li><a [routerLink]="['Attribute-Directive']">Attribute-Directive</a></li>
                         <li><a href="#">Page 3</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -81,7 +82,8 @@ import {BootstrapMainComponent} from "./bootstrap/bootstrap-main.component";
     {path: '/jquery', name: 'JQuery', component: JqueryComponent},
     {path: '/wiki-http', name: 'Wiki-Http', component: WikiHttpMainComponent},
     {path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: HierarchicalDependencyInjectionComponent},
-    {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent}
+    {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
+    {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent}
 
 ])
 export class AppComponent {
