@@ -5,9 +5,10 @@ import {WikiSmartComponent} from "./wiki-smart.component";
 
 @Component({
     template: `
+    <my-wiki-smart>WikiSmart Loading...</my-wiki-smart>
     <my-toh>ToH Loading...</my-toh>
     <my-wiki>Wiki Loading...</my-wiki>
-    <my-wiki-smart>WikiSmart Loading...</my-wiki-smart>
+  
     `,
     directives: [TohComponent,WikiComponent, WikiSmartComponent]
 
