@@ -79,7 +79,7 @@ export class RecipeEditComponent implements OnInit, CanDeactivate {
 }
 
 function hasNumbers(control: Control):{[s: string]:boolean}{
-	if (!(''+control.value).match('\\d+')){
+	if (!(''+control.value).match('^[0-9]+$')){
 		return { noNumbers: true };
 	}
 }
