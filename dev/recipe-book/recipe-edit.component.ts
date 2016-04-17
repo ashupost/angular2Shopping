@@ -65,8 +65,8 @@ export class RecipeEditComponent implements OnInit, CanDeactivate {
 		}
 		this.myForm = this._formBuilder.group({
 			name: [fbRecipeName, Validators.required],
-			imageUrl: [fbRecipeImageUrl],
-			content: [fbRecipeContent],
+			imageUrl: [fbRecipeImageUrl], // not mandatory
+			content: [fbRecipeContent, Validators.required],
 			ingredients: this._formBuilder.array(fbIngredients.controls)
 		});
 	}
