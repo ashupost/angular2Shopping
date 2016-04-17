@@ -84,6 +84,7 @@ System.register(['angular2/core', 'angular2/common', 'angular2/router', './recip
                             fbRecipeContent = this.recipe.content;
                         }
                     }
+                    // if editMode = edit | create
                     this.myForm = this._formBuilder.group({
                         name: [fbRecipeName, common_1.Validators.required],
                         imageUrl: [fbRecipeImageUrl],
