@@ -16,6 +16,7 @@ import {BootstrapMainComponent} from "./bootstrap/bootstrap-main.component";
 import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-directive.app.component";
 import {BootstrapSecondComponent} from "./bootstrap/bootstrap-second.component";
 import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
+import {TemplateAppComponent} from "./template-syntax/template.app.component";
 
 @Component({
     selector: 'my-app',
@@ -50,6 +51,7 @@ import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
                                 <li><a [routerLink]="['Hierarchical-Dependency-Injection']">Hierarchical-DI</a></li>
                                 <li><a [routerLink]="['Bootstrap']">Bootstrap</a></li>
                                 <li><a [routerLink]="['Bootstrap-Second']">Bootstrap-Second</a></li>
+                                <li><a [routerLink]="['Tootstrap-Third']">Tootstrap-Third</a></li>
                             </ul>
                         </li>
                         <li><a [routerLink]="['Attribute-Directive']">Attribute-Directive</a></li>
@@ -88,7 +90,8 @@ import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
     {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent},
     {path: '/bootstrap-second', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
-    {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
+    {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent},
+    {path: '/tootstrap-third', name: 'Tootstrap-Third', component: TemplateAppComponent}
 
 ])
 export class AppComponent {
