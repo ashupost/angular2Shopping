@@ -386,7 +386,10 @@ a:focus {
   .main-header {
     position: relative;
   }
-  .main-header .logo,
+  /* Mritunjay Update */
+  .main-header .logo{
+    display: none;
+  }
   .main-header .navbar {
     width: 100%;
     float: none;
