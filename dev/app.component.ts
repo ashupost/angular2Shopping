@@ -21,6 +21,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
 @Component({
     selector: 'my-app',
     template: `
+   <!--
     <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -64,9 +65,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
                 </div>
             </div>
     </nav>
-
-    	
-    	
+    -->
    	<div class="main">
 			<router-outlet></router-outlet>
    	</div>
