@@ -66,9 +66,9 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
             </div>
     </nav>
     -->
-   	<div class="main">
+   
 			<router-outlet></router-outlet>
-   	</div>
+   	
     `,
     directives: [ROUTER_DIRECTIVES]
 
