@@ -74,6 +74,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
 
 })
 @RouteConfig([
+    {path: '/', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
     {path: '/recipes/...', name: 'Recipes', component: RecipesComponent},
 	{path: '/shopping-list', name: 'ShoppingList', component: ShoppingListComponent},
     {path: '/my-form', name: 'My-form', component: MyFormComponent},
@@ -91,7 +92,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
 
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
 
-    {path: '/bootstrap-second', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
+
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
 
