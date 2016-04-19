@@ -86,11 +86,14 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
     {path: '/jquery', name: 'JQuery', component: JqueryComponent},
     {path: '/wiki-http', name: 'Wiki-Http', component: WikiHttpMainComponent},
     {path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: HierarchicalDependencyInjectionComponent},
-    {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
+    {path: '/template-syntax', name: 'Template-Syntax', component: TemplateAppComponent},
     {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent},
+
+    {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
+
     {path: '/bootstrap-second', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
-    {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent},
-    {path: '/tootstrap-third', name: 'Tootstrap-Third', component: TemplateAppComponent}
+    {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
+
 
 ])
 export class AppComponent {
