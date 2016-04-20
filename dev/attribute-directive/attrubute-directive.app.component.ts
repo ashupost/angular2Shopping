@@ -12,12 +12,8 @@ import {HighlightDirective} from './highlight.directive';
                     </div>
                     
                     <p [myHighlight]="color">Highlight me!</p>
-                    
-                    <p [myHighlight]="color" [defaultColor]="'violet'">
-                      Highlight me too!
-                    </p>
+                    <p [myHighlight]="color" [defaultColor]="'violet'">Highlight me too!</p>
     `,
-
     directives: [HighlightDirective]
 })
 
