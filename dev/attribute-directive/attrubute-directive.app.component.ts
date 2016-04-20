@@ -11,10 +11,9 @@ import {AttributeDirectiveDescriptionComponent} from "./attrubute-description.co
                       <input type="radio" name="colors" (click)="color='yellow'">Yellow
                       <input type="radio" name="colors" (click)="color='cyan'">Cyan
                     </div>
-                    
                     <p [myHighlight]="color">Highlight me!</p>
                     <p [myHighlight]="color" [defaultColor]="'violet'">Highlight me too!</p>
-                    
+                    <button class="btn btn-info" [myHighlight]="color" [defaultColor]="'violet'">Submit</button>
                     <my-attribute-description></my-attribute-description>
     `,
     directives: [HighlightDirective, AttributeDirectiveDescriptionComponent]
