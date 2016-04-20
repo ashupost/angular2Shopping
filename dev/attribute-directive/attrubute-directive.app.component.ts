@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {HighlightDirective} from './highlight.directive';
+import {AttributeDirectiveDescriptionComponent} from "./attrubute-description.component";
 
 @Component({
     template: `
@@ -13,8 +14,10 @@ import {HighlightDirective} from './highlight.directive';
                     
                     <p [myHighlight]="color">Highlight me!</p>
                     <p [myHighlight]="color" [defaultColor]="'violet'">Highlight me too!</p>
+                    
+                    <my-attribute-description></my-attribute-description>
     `,
-    directives: [HighlightDirective]
+    directives: [HighlightDirective, AttributeDirectiveDescriptionComponent]
 })
 
 export class AttributeDirectiveAppComponent { }
