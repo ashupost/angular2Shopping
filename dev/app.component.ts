@@ -89,10 +89,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
     {path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: HierarchicalDependencyInjectionComponent},
     {path: '/template-syntax', name: 'Template-Syntax', component: TemplateAppComponent},
     {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent},
-
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
-
-
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
 
