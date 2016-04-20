@@ -25,7 +25,7 @@ export class HighlightDirective {
     constructor(el: ElementRef) { this._el = el.nativeElement; }
 
     onMouseEnter() { this._highlight(this.highlightColor || this._defaultColor); }
-    onMouseLeave() { this._highlight(null); }
+    onMouseLeave() { this._highlight(''); /* this._highlight(null); */ }
 
     private _highlight(color:string) {
         this._el.style.backgroundColor = color;

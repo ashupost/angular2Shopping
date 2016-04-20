@@ -34,7 +34,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     configurable: true
                 });
                 HighlightDirective.prototype.onMouseEnter = function () { this._highlight(this.highlightColor || this._defaultColor); };
-                HighlightDirective.prototype.onMouseLeave = function () { this._highlight(null); };
+                HighlightDirective.prototype.onMouseLeave = function () { this._highlight(''); /* this._highlight(null); */ };
                 HighlightDirective.prototype._highlight = function (color) {
                     this._el.style.backgroundColor = color;
                 };
