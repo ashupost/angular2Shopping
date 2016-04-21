@@ -5,12 +5,16 @@ import {HTTPRestDataService} from "./http-rest.data.service";
     template: `
       <button (click)="getHTTPCall()">Get REST CALL SHOW TIME</button>
       <h4>{{getData}}</h4>
+       <div class="alert alert-info">
+          <h4>{{error}}</h4>
+      </div>
     `,
     providers: [HTTPRestDataService]
 
 })
 export class HTTPRestMasterComponent {
     getData:string;
+    error:any;
     constructor(private _dataService: HTTPRestDataService) {
     }
 
@@ -18,7 +22,7 @@ export class HTTPRestMasterComponent {
         this._dataService.getCall()
             .subscribe(
                 data => this.getData = JSON.stringify(data),
-                error => alert(error),
+                error => this.error = error.toString(),
                 () => console.log("finished HTTP get Call")
             );
     }

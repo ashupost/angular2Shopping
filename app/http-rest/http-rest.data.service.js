@@ -1,4 +1,4 @@
-System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map"], function(exports_1, context_1) {
+System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map", "rxjs/Observable"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map"], fun
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var http_1, core_1;
+    var http_1, core_1, Observable_1;
     var HTTPRestDataService;
     return {
         setters:[
@@ -20,7 +20,10 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map"], fun
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (_1) {}],
+            function (_1) {},
+            function (Observable_1_1) {
+                Observable_1 = Observable_1_1;
+            }],
         execute: function() {
             HTTPRestDataService = (function () {
                 function HTTPRestDataService(_http) {
@@ -28,11 +31,24 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map"], fun
                     this._data = ["Mritunjay", "Sapna", "Kumar"];
                 }
                 HTTPRestDataService.prototype.getCall = function () {
-                    return this._http.get("package.json")
-                        .map(function (res) { return res.json(); });
+                    return this._http.get("package.json1")
+                        .map(this.extractData).catch(this.handleError);
                 };
                 HTTPRestDataService.prototype.postData = function (value) {
                     this._data.push(value);
+                };
+                HTTPRestDataService.prototype.extractData = function (res) {
+                    if (res.status < 200 || res.status >= 300) {
+                        throw new Error('Bad response status: ' + res.status);
+                    }
+                    var body = res.json();
+                    return body.data || {};
+                };
+                HTTPRestDataService.prototype.handleError = function (error) {
+                    // In a real world app, we might send the error to remote logging infrastructure
+                    var errMsg = error.message || 'Server error';
+                    console.error(errMsg); // log to console instead
+                    return Observable_1.Observable.throw(errMsg);
                 };
                 HTTPRestDataService = __decorate([
                     core_1.Injectable(), 
@@ -44,5 +60,4 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map"], fun
         }
     }
 });
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImh0dHAtcmVzdC9odHRwLXJlc3QuZGF0YS5zZXJ2aWNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztZQUtBO2dCQUVJLDZCQUFvQixLQUFXO29CQUFYLFVBQUssR0FBTCxLQUFLLENBQU07b0JBRHZCLFVBQUssR0FBRyxDQUFDLFdBQVcsRUFBRSxPQUFPLEVBQUUsT0FBTyxDQUFDLENBQUM7Z0JBR2hELENBQUM7Z0JBQ0QscUNBQU8sR0FBUDtvQkFDSSxNQUFNLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsY0FBYyxDQUFDO3lCQUNoQyxHQUFHLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFFLEVBQVYsQ0FBVSxDQUFDLENBQUM7Z0JBQ2hDLENBQUM7Z0JBQ0Qsc0NBQVEsR0FBUixVQUFTLEtBQWE7b0JBQ2xCLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO2dCQUMzQixDQUFDO2dCQVpMO29CQUFDLGlCQUFVLEVBQUU7O3VDQUFBO2dCQWFiLDBCQUFDO1lBQUQsQ0FaQSxBQVlDLElBQUE7WUFaRCxxREFZQyxDQUFBIiwiZmlsZSI6Imh0dHAtcmVzdC9odHRwLXJlc3QuZGF0YS5zZXJ2aWNlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtIdHRwfSBmcm9tIFwiYW5ndWxhcjIvaHR0cFwiO1xyXG5pbXBvcnQge0luamVjdGFibGV9IGZyb20gXCJhbmd1bGFyMi9jb3JlXCI7XHJcbmltcG9ydCBcInJ4anMvYWRkL29wZXJhdG9yL21hcFwiO1xyXG5cclxuQEluamVjdGFibGUoKVxyXG5leHBvcnQgY2xhc3MgSFRUUFJlc3REYXRhU2VydmljZSB7XHJcbiAgICBwcml2YXRlIF9kYXRhID0gW1wiTXJpdHVuamF5XCIsIFwiU2FwbmFcIiwgXCJLdW1hclwiXTtcclxuICAgIGNvbnN0cnVjdG9yKHByaXZhdGUgX2h0dHA6IEh0dHApe1xyXG5cclxuICAgIH1cclxuICAgIGdldENhbGwoKXtcclxuICAgICAgICByZXR1cm4gdGhpcy5faHR0cC5nZXQoXCJwYWNrYWdlLmpzb25cIilcclxuICAgICAgICAgICAgLm1hcChyZXMgPT4gcmVzLmpzb24oKSk7XHJcbiAgICB9XHJcbiAgICBwb3N0RGF0YSh2YWx1ZTogc3RyaW5nKXtcclxuICAgICAgICB0aGlzLl9kYXRhLnB1c2godmFsdWUpO1xyXG4gICAgfVxyXG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
+//# sourceMappingURL=http-rest.data.service.js.map
