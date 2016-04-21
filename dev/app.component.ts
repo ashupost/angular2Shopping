@@ -17,6 +17,7 @@ import {AttributeDirectiveAppComponent} from "./attribute-directive/attrubute-di
 import {BootstrapSecondComponent} from "./bootstrap/bootstrap-second.component";
 import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
 import {TemplateAppComponent} from "./template-syntax/template.app.component";
+import {RXJSComponent} from "./rx-js/rx-js.component";
 
 @Component({
     selector: 'my-app',
@@ -89,6 +90,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
     {path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: HierarchicalDependencyInjectionComponent},
     {path: '/template-syntax', name: 'Template-Syntax', component: TemplateAppComponent},
     {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent},
+    {path: '/rx-js', name: 'Rx-Js', component: RXJSComponent},
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
