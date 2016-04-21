@@ -4,7 +4,8 @@ import {Observable} from "rxjs/Observable";
 @Component({
     template: `
      <H1> Hellp RX JS Example</H1>
-     <button (click)="onStart()">Start</button> ||||  <button (click)="onSubscribe()">onSubscribe</button>
+     <p><button class="btn" (click)="onStart()">Start</button> </p>
+     <p><button class="btn" (click)="onSubscribe()">onSubscribe</button></p>
     `
 })
 export class RXJSComponent {
