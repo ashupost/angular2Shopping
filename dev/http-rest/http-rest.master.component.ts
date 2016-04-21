@@ -22,7 +22,7 @@ export class HTTPRestMasterComponent {
         this._dataService.getCall()
             .subscribe(
                 data => this.getData = JSON.stringify(data),
-                error => this.error = error.toString(),
+                error => this.error = <any>error,
                 () => console.log("finished HTTP get Call")
             );
     }

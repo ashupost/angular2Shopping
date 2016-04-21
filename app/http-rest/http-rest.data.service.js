@@ -31,7 +31,7 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map", "rxj
                     this._data = ["Mritunjay", "Sapna", "Kumar"];
                 }
                 HTTPRestDataService.prototype.getCall = function () {
-                    return this._http.get("package.json1")
+                    return this._http.get("package.json")
                         .map(this.extractData).catch(this.handleError);
                 };
                 HTTPRestDataService.prototype.postData = function (value) {
@@ -41,8 +41,9 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map", "rxj
                     if (res.status < 200 || res.status >= 300) {
                         throw new Error('Bad response status: ' + res.status);
                     }
-                    var body = res.json();
-                    return body.data || {};
+                    // let body = res.json();
+                    // return body.data || { };
+                    return res.json();
                 };
                 HTTPRestDataService.prototype.handleError = function (error) {
                     // In a real world app, we might send the error to remote logging infrastructure
