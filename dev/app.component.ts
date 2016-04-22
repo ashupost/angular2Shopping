@@ -18,6 +18,7 @@ import {BootstrapSecondComponent} from "./bootstrap/bootstrap-second.component";
 import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
 import {TemplateAppComponent} from "./template-syntax/template.app.component";
 import {RXJSComponent} from "./rx-js/rx-js.component";
+import {PipeMainComponent} from "./pipe-example/pipe.main.component";
 
 @Component({
     selector: 'my-app',
@@ -91,6 +92,7 @@ import {RXJSComponent} from "./rx-js/rx-js.component";
     {path: '/template-syntax', name: 'Template-Syntax', component: TemplateAppComponent},
     {path: '/attribute-directive', name: 'Attribute-Directive', component: AttributeDirectiveAppComponent},
     {path: '/rx-js', name: 'Rx-Js', component: RXJSComponent},
+    {path: '/pipe-example', name: 'Pipe-Example', component: PipeMainComponent},
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
