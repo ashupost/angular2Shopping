@@ -42,7 +42,7 @@ System.register(['angular2/core', './recipe.service', 'angular2/router'], functi
                 RecipeListComponent = __decorate([
                     core_1.Component({
                         selector: 'my-recipe-list',
-                        templateUrl: "\n\t\t\t\t<div class=\"list-group-item\">\n\t\t\t\t<button class=\"btn bg-orange margin\" (click)=\"onAddRecipe()\">Add Recipe Here/Click Image to Update</button>\n\t\t\t\t<ul class=\"list-group\">\n\t\t\t\t\t<li *ngFor=\"#item of recipes\" (click)=\"onSelect(item)\" class=\"list-group-item\">\n\t\t\t\t\t\t<div class=\"panel panel-default\">\n\t\t\t\t\t\t\t<img [src]=\"item.imageUrl\" alt=\"Recipe\" title=\"{{item.imageUrl}}\" class=\"img-rounded\" width=\"120\" height=\"96\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"text\">{{item.name}}</div>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t</div>    \n    \n    "
+                        template: "\n\t\t\t\t<div class=\"list-group-item\">\n\t\t\t\t<button class=\"btn bg-orange margin\" (click)=\"onAddRecipe()\">Add Recipe Here/Click Image to Update</button>\n\t\t\t\t<ul class=\"list-group\">\n\t\t\t\t\t<li *ngFor=\"#item of recipes\" (click)=\"onSelect(item)\" class=\"list-group-item\">\n\t\t\t\t\t\t<div class=\"panel panel-default\">\n\t\t\t\t\t\t\t<img [src]=\"item.imageUrl\" alt=\"Recipe\" title=\"{{item.imageUrl}}\" class=\"img-rounded\" width=\"120\" height=\"96\">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"text\">{{item.name}}</div>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t</div>    \n    "
                     }), 
                     __metadata('design:paramtypes', [recipe_service_1.RecipeService, router_1.Router])
                 ], RecipeListComponent);

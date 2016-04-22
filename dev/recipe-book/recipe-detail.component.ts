@@ -4,7 +4,30 @@ import {RouteParams, Router} from 'angular2/router';
 import {RecipeService} from './recipe.service';
 import {ShoppingListService} from '../shared/shopping-list.service';
 @Component({
-    templateUrl: 'templates/recipe-book/recipe-detail.tpl.html',//right side panel , no edit
+    template: `
+			<div *ngIf="recipe == null" class="list-group-item active">
+				<h3>Please choose or create a recipe!!</h3>
+			</div>
+			
+			<div *ngIf="recipe != null" class="list-group">
+				<div class="list-group-item">
+				<h1>{{recipe.name}}</h1>
+				<span><a class="btn bg-orange margin" (click)="onEdit()">Edit</a> | <a (click)="onDelete()" class="btn bg-red margin">Delete</a></span>
+				</div>
+					<div class="list-group-item">
+					<img [src]="recipe.imageUrl" width="120" height="96">
+				</div>
+				<div class="list-group-item">
+					{{recipe.content}}
+				</div>
+				<div class="list-group-item">
+					<a (click)="onAddToShoppingList()" class="btn bg-orange margin" >Add all to shopping list</a>
+					<ul class="list-group">
+						<li *ngFor="#item of recipe.ingredients" class="list-group-item">{{item.name}} ({{item.amount}})</li>
+					</ul>
+				</div>
+			</div>    
+   `,
     providers: [ShoppingListService]
 })
 export class RecipeDetailComponent implements OnInit{
