@@ -10,6 +10,7 @@ export class RecipeService {
 		return RECIPES[index];
 	}
 	getRecipeIndex(item: Recipe){
+		console.log('RECIPES.indexOf(item)',RECIPES.indexOf(item));
 		return RECIPES.indexOf(item);
 	}
 	insertRecipe(item: Recipe){

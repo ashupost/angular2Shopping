@@ -13,7 +13,7 @@ import {RecipeEditComponent} from './recipe-edit.component';
 })
 
 @RouteConfig([
-	{path: '/',          name: 'RecipeDetail', component: RecipeDetailComponent, useAsDefault: true},
+	{path: '/RecipeDetail',          name: 'RecipeDetail', component: RecipeDetailComponent, useAsDefault: true},
 	{path: '/:editMode', name: 'RecipeEdit',   component: RecipeEditComponent}
 ])
 
