@@ -1,5 +1,5 @@
 import {Component, EventEmitter} from 'angular2/core';
-import {Output} from 'angular2/core';
+import {Output, Input} from 'angular2/core';
 import {Leve12Component} from './level-2.component';
 
 @Component({
@@ -16,16 +16,12 @@ import {Leve12Component} from './level-2.component';
     </div>
  
 `,
-    directives: [Leve12Component],
-    inputs: ['text']
-
+    directives: [Leve12Component]
 })
 export class Level1Component {
-    text:string;
+    @Input() text:string;
     @Output() changed = new EventEmitter();
-    constructor(){
-
-    }
+    constructor(){ }
     onChange(value){
         this.text= value;
         this.changed.emit(value);
@@ -35,5 +31,4 @@ export class Level1Component {
         this.changed.emit(value);
 
     }
-
 }
