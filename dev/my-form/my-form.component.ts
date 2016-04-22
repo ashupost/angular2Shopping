@@ -5,8 +5,6 @@ import {Employee} from "../mock/employee";
 @Component({ // NO SELECTOR BECAUSE IT IS A ROUTE
   	templateUrl: 'templates/my-form/my-form.html',
 	styleUrls: ['src/css/my-form.css']
-
-
 })
 export class MyFormComponent {
 	powers = ['Really Smart', 'Super Flexible',
