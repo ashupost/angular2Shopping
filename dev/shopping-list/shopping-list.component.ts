@@ -4,9 +4,18 @@ import {ShoppingListService} from '../shared/shopping-list.service';
 import {Ingredient} from '../shared/ingredient';
 
 @Component({ // NO SELECTOR BECAUSE IT IS A ROUTE
-    templateUrl: 'templates/shopping-list/shopping-list.tpl.html',
-    directives: [ShoppingListEditComponent],
-    providers: [ShoppingListService]
+	directives: [ShoppingListEditComponent],
+	providers: [ShoppingListService],
+    template: `
+			<h1>Shopping List</h1>
+			<my-shopping-list-edit [ingredient]="selectedItem"></my-shopping-list-edit>
+			<div class="list">
+				<button class="btn bg-orange margin" (click)="onAddItem()">Add New Item</button>
+				<ul>
+					<li *ngFor="#item of shoppingList" (click)="onSelectItem(item)">{{item.name}} {{item.amount}}</li>
+				</ul>
+			</div>    
+    `
 })
 export class ShoppingListComponent implements OnInit{
 	shoppingList: Ingredient[];

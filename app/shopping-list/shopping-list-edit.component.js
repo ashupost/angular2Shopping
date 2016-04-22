@@ -39,7 +39,7 @@ System.register(['angular2/core', '../shared/shopping-list.service'], function(e
                 ShoppingListEditComponent = __decorate([
                     core_1.Component({
                         selector: 'my-shopping-list-edit',
-                        templateUrl: 'templates/shopping-list/shopping-list-edit.tpl.html',
+                        template: "\n\t\t<h1>{{ingredient === null ? 'Add' : 'Edit' }} Item </h1>\n\t\t<form id=\"shopping-list-add\" (ngSubmit)=\"onSubmit(f.value)\" #f=\"ngForm\">\n\t\t\t<div class=\"form-group\">\n\t\t\t<label for=\"item-name\">Name</label>\n\t\t\t<input type=\"text\" class=\"form-control\" id=\"item-name\" [ngModel]=\"ingredient?.name\" required ngControl=\"name\">\n\t\t\t\t</div>\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=\"item-amount\">amount</label>\n\t\t\t<input type=\"text\" class=\"form-control\" id=\"item-amount\" required required [ngModel]=\"ingredient?.amount\" ngControl=\"amount\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\">\n\t\t\t<button class=\"btn bg-orange margin\" type=\"submit\">{{ingredient === null ? 'Add' : 'Edit' }} Item</button>\n\t\t\t<button class=\"btn bg-red margin\" type=\"submit\" *ngIf=\"ingredient !== null\" (click)=\"onDelete()\">Delete Item</button>\n\t\t\t\t</div>\n\t\t</form>    \n    ",
                         inputs: ['ingredient']
                     }), 
                     __metadata('design:paramtypes', [shopping_list_service_1.ShoppingListService])
