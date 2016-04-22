@@ -8,10 +8,10 @@ import {Level1Component} from "./level-1.component";
     <input type="text" #textInput value="{{text}}">
     <button (click)="onChange(textInput.value)">Change</button>
     <br><br>
-    <div style="background-color: #Fb97c4; margin: 50px;" id="c1">
+    <div style="background-color: #Fb97c4; margin: 50px;">
          <level-1-component [text]="text" (changed) = "onChange($event)"></level-1-component>
     </div>
-    <div style="background-color: #Fb97c4; margin: 50px;" id="c2">
+    <div style="background-color: #Fb97c4; margin: 50px;">
         <level-1-component [text]="text" (changed) = "onChange($event)"></level-1-component>
     </div>
     `,

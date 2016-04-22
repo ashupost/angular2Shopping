@@ -11,7 +11,7 @@ import {Leve12Component} from './level-2.component';
     
     <button (click)="onChange(textElement.value)">Change</button>
     <br><br>
-    <div style="background-color: #0b97c4; margin: 50px;" id="c3">
+    <div style="background-color: #0b97c4; margin: 50px;">
          <level-2-component [text]="text" (changed) = "onLevel2Changed($event)"></level-2-component>
     </div>
  
@@ -19,7 +19,7 @@ import {Leve12Component} from './level-2.component';
     directives: [Leve12Component]
 })
 export class Level1Component {
-    @Input() text:string;
+    @Input() text: string;
     @Output() changed = new EventEmitter();
     constructor(){ }
     onChange(value){
