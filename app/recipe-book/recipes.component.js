@@ -39,7 +39,7 @@ System.register(['angular2/core', './recipe.service', './recipe-list.component',
                 RecipesComponent = __decorate([
                     core_1.Component({
                         selector: 'my-recipes',
-                        templateUrl: "\n\t\t\t<div class=\"master\">\n\t\t\t\t<my-recipe-list></my-recipe-list>\n\t\t\t</div>\n\t\t\t<div class=\"detail\">\n\t\t\t\t<router-outlet></router-outlet>\n\t\t\t</div>\n\t",
+                        template: "\n\t\t\t<div class=\"master\">\n\t\t\t\t<my-recipe-list></my-recipe-list>\n\t\t\t</div>\n\t\t\t<div class=\"detail\">\n\t\t\t\t<router-outlet></router-outlet>\n\t\t\t</div>\n\t",
                         providers: [recipe_service_1.RecipeService],
                         directives: [recipe_list_component_1.RecipeListComponent, router_1.ROUTER_DIRECTIVES],
                         styleUrls: ['src/css/app.css']
