@@ -6,7 +6,7 @@ import {RecipeDetailComponent} from './recipe-detail.component';
 import {RecipeEditComponent} from './recipe-edit.component';
 @Component({
 	selector: 'my-recipes',
-	templateUrl: `
+	template: `
 			<div class="master">
 				<my-recipe-list></my-recipe-list>
 			</div>
