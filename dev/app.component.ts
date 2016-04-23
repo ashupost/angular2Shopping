@@ -24,6 +24,7 @@ import {DataService} from "./di/di-data.service";
 @Component({
     selector: 'my-app',
     template: `
+           <p><a [routerLink]="['Recipes']">Recipes</a></p>
   			<router-outlet></router-outlet>
    `,
     directives: [ROUTER_DIRECTIVES],
