@@ -4,10 +4,10 @@ import {DILevel2Component} from "./di-level2.compoment";
 
 @Component({
     template: `
-     <section style="padding: 10px 0; color: #FFFFFF; background-color: #0f7595; margin: 10px 20px;">
+     <section style="padding: 10px 0; background-color: #0f7595; margin: 10px 20px;">
          <di-level1-component></di-level1-component>
      </section>
-     <section style="padding: 10px 0; color: #FFFFFF; background-color: #0f7595; margin: 10px 20px;">
+     <section style="padding: 10px 0;background-color: #0f7595; margin: 10px 20px;">
          <di-level2-component></di-level2-component>
      </section>
     `,
