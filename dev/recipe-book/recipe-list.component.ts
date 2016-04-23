@@ -7,33 +7,26 @@ import {Router} from 'angular2/router';
 	selector: 'my-recipe-list', // left side panel
 	template: `
 				<div class="list-group-item">
-				<button class="btn bg-orange margin" (click)="onAddRecipe()">Add Recipe Here/Click Image to Update</button>
-				<ul class="list-group">
-					<li *ngFor="#item of recipes" (click)="onSelect(item)" class="list-group-item">
-						<div class="panel panel-default">
-							<img [src]="item.imageUrl" alt="Recipe" title="{{item.imageUrl}}" class="img-rounded" width="120" height="96">
-						</div>
-						<div class="text">{{item.name}}</div>
-					</li>
-				</ul>
+					<button class="btn bg-orange margin" (click)="onAddRecipe()">Add Recipe Here/Click Image to Update</button>
+					<ul class="list-group">
+						<li *ngFor="#item of recipes" (click)="onSelect(item)" class="list-group-item">
+							<div class="panel panel-default">
+								<img [src]="item.imageUrl" alt="Recipe" title="{{item.imageUrl}}" class="img-rounded" width="120" height="96">
+							</div>
+							<div class="text">{{item.name}}</div>
+						</li>
+					</ul>
 				</div>    
     `
 })
 export class RecipeListComponent implements OnInit {
 	private recipes: Recipe[];
-	errorMessage: string;
-	constructor(private _recipeService: RecipeService, private _router: Router) {
-
-	}
+	constructor(private _recipeService: RecipeService, private _router: Router) { }
 	onSelect(item: Recipe){
 		this._router.navigate(['RecipeDetail', {recipeIndex: Number(this._recipeService.getRecipeIndex(item))}]);
 	}
 	ngOnInit(): any {
-
 		this._recipeService.getAllRecipes().then(recipes => this.recipes = recipes);
-
-
-		//this.recipes = this._recipeService.getAllRecipes();
 	}
 	onAddRecipe(){
 		this._router.navigate(['RecipeEdit', { editMode: 'create' }]);
