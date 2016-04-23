@@ -24,55 +24,8 @@ import {DataService} from "./di/di-data.service";
 @Component({
     selector: 'my-app',
     template: `
-   <!--
-    <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">WebSiteName</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a [routerLink]="['Bootstrap-Third']">Home</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Click me for Menu <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a [routerLink]="['Recipes']">Recipes</a></li>
-                                <li><a [routerLink]="['ShoppingList']">ShoppingList</a></li>
-                                <li><a [routerLink]="['My-form']">My-form</a></li>
-                                <li><a [routerLink]="['Di-demo']">Dependency-Injection</a></li>
-                                <li><a [routerLink]="['Data-flow']">Data-flow</a></li>
-                                <li><a [routerLink]="['Http-rest']">Http-rest</a></li>
-                                <li><a [routerLink]="['Contacts']">Contact</a></li>
-                                <li><a [routerLink]="['Structural']">Structural</a></li>
-                                <li><a [routerLink]="['Lifecycle']">Lifecycle</a></li>
-                                <li><a [routerLink]="['JQuery']">JQuery</a></li>
-                                <li><a [routerLink]="['Wiki-Http']">Wiki-Http</a></li>
-                                <li><a [routerLink]="['Hierarchical-Dependency-Injection']">Hierarchical-DI</a></li>
-                                <li><a [routerLink]="['Bootstrap']">Bootstrap</a></li>
-                                <li><a [routerLink]="['Bootstrap-Second']">Bootstrap-Second</a></li>
-                                <li><a [routerLink]="['Tootstrap-Third']">Tootstrap-Third</a></li>
-                            </ul>
-                        </li>
-                        <li><a [routerLink]="['Attribute-Directive']">Attribute-Directive</a></li>
-                        <li><a href="#">Page 3</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
-                </div>
-            </div>
-    </nav>
-    -->
-   
-			<router-outlet></router-outlet>
-   	
-    `,
+  			<router-outlet></router-outlet>
+   `,
     directives: [ROUTER_DIRECTIVES],
     providers: [DataService] // common for DIMasterComponent and HTTPRestMasterComponent
 
