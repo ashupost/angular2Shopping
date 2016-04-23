@@ -4,7 +4,7 @@ import {RECIPES} from '../mock/recipes';
 @Injectable()
 export class RecipeService {
 	getAllRecipes() {
-		return RECIPES;
+		return Promise.resolve(RECIPES);
 	}
 	getRecipe(index: number) {
 		return RECIPES[index];

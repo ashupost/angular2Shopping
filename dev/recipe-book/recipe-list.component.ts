@@ -4,8 +4,8 @@ import {Recipe} from '../shared/recipe';
 import {Router} from 'angular2/router';
 
 @Component({
-    selector: 'my-recipe-list', // left side panel
-    template: `
+	selector: 'my-recipe-list', // left side panel
+	template: `
 				<div class="list-group-item">
 				<button class="btn bg-orange margin" (click)="onAddRecipe()">Add Recipe Here/Click Image to Update</button>
 				<ul class="list-group">
@@ -21,14 +21,18 @@ import {Router} from 'angular2/router';
 })
 export class RecipeListComponent implements OnInit {
 	private recipes: Recipe[];
-
+	errorMessage: string;
 	constructor(private _recipeService: RecipeService, private _router: Router) {
-		this.recipes = this._recipeService.getAllRecipes();
+
 	}
 	onSelect(item: Recipe){
 		this._router.navigate(['RecipeDetail', {recipeIndex: Number(this._recipeService.getRecipeIndex(item))}]);
 	}
 	ngOnInit(): any {
+
+		this._recipeService.getAllRecipes().then(recipes => this.recipes = recipes);
+
+
 		//this.recipes = this._recipeService.getAllRecipes();
 	}
 	onAddRecipe(){
