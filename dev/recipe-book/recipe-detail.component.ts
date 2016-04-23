@@ -32,7 +32,7 @@ import {ShoppingListService} from '../shared/shopping-list.service';
 })
 export class RecipeDetailComponent implements OnInit{
 	recipe: Recipe;
-	private _recipeIndex: number;
+	private _recipeIndex: string;
 
 
 	constructor(private _routeParams: RouteParams,	private _recipeService: RecipeService,	private _router: Router, private _shoppingListService: ShoppingListService) {
