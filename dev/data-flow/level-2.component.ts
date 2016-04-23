@@ -6,7 +6,7 @@ import {Output, Input} from 'angular2/core';
     <h4>Level 2 Component</h4>
     <input type="text" #textElement value="{{text}}">
     
-    <button (click)="onChange(textElement.value)">Change</button>
+    <button (click)="onChange(textElement.value)" class="btn btn-primary btn-sm">Change</button>
      `
 })
 export class Leve12Component {
