@@ -20,6 +20,7 @@ import {TemplateAppComponent} from "./template-syntax/template.app.component";
 import {RXJSComponent} from "./rx-js/rx-js.component";
 import {PipeMainComponent} from "./pipe-example/pipe.main.component";
 import {DataService} from "./di/di-data.service";
+import {HostListenerComponent} from "./host-listener/host-listener.component";
 
 // Let TypeScript know about the special SystemJS __moduleName variable
 declare var __moduleName: string;
@@ -27,7 +28,7 @@ declare var __moduleName: string;
 if (!__moduleName) {
     __moduleName = `http://${location.host}/${location.pathname}/app/`;
 }
-console.log(`The __moduleName is ${__moduleName} `);
+//console.log(`The __moduleName is ${__moduleName} `);
 @Component({
     moduleId: __moduleName,
     selector: 'my-app',
@@ -58,6 +59,7 @@ console.log(`The __moduleName is ${__moduleName} `);
     {path: '/rx-js', name: 'Rx-Js', component: RXJSComponent},
     {path: '/pipe-example', name: 'Pipe-Example', component: PipeMainComponent},
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
+    {path: '/host-listener', name: 'HostListener-Example', component: HostListenerComponent},
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
 
