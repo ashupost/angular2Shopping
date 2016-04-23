@@ -21,7 +21,15 @@ import {RXJSComponent} from "./rx-js/rx-js.component";
 import {PipeMainComponent} from "./pipe-example/pipe.main.component";
 import {DataService} from "./di/di-data.service";
 
+// Let TypeScript know about the special SystemJS __moduleName variable
+declare var __moduleName: string;
+// moduleName is not set in some module loaders; set it explicitly
+if (!__moduleName) {
+    __moduleName = `http://${location.host}/${location.pathname}/app/`;
+}
+console.log(`The __moduleName is ${__moduleName} `);
 @Component({
+    moduleId: __moduleName,
     selector: 'my-app',
     template: `
            <p><a [routerLink]="['Recipes']">Recipes</a></p>
