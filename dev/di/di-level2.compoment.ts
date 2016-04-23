@@ -10,11 +10,10 @@ import {DataService} from "./di-data.service";
                 <input type="text" #inputData> 
                 <button (click)="pushData(inputData.value)" >Add</button>
 		</div>
-    `,
-    providers: [DataService]
+    `
 })
 export class DILevel2Component {
-   data: string;
+    data: string;
     constructor(private _dataService: DataService){
 
     }

@@ -1,5 +1,7 @@
 import {Component} from 'angular2/core';
 import {HTTPRestDataService} from "./http-rest.data.service";
+import {DataService} from "../di/di-data.service";
+import {DILevel2Component} from "../di/di-level2.compoment";
 
 @Component({
     template: `
@@ -8,7 +10,11 @@ import {HTTPRestDataService} from "./http-rest.data.service";
        <div class="alert alert-info">
           <h4>{{error}}</h4>
       </div>
+       <section style="background-color: #0f7595;">
+         <di-level2-component></di-level2-component>
+     </section>
     `,
+    directives: [DILevel2Component],
     providers: [HTTPRestDataService]
 
 })

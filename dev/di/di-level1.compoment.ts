@@ -11,8 +11,7 @@ import {DataService} from "./di-data.service";
                 <input type="text" #inputData> 
                 <button (click)="pushData(inputData.value)" >Add</button>
 		</div>
-    `,
-    providers: [DataService]
+    `
 
 
 })

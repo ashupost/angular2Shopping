@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {DILevel1Component} from "./di-level1.compoment";
 import {DILevel2Component} from "./di-level2.compoment";
+import {DataService} from "./di-data.service";
 
 @Component({
     template: `
@@ -12,7 +13,6 @@ import {DILevel2Component} from "./di-level2.compoment";
      </section>
     `,
     directives: [DILevel1Component, DILevel2Component]
-
 })
 export class DIMasterComponent {
 }

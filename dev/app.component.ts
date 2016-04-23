@@ -19,6 +19,7 @@ import {BootstrapThirdComponent} from "./bootstrap/bootstrap-third.component";
 import {TemplateAppComponent} from "./template-syntax/template.app.component";
 import {RXJSComponent} from "./rx-js/rx-js.component";
 import {PipeMainComponent} from "./pipe-example/pipe.main.component";
+import {DataService} from "./di/di-data.service";
 
 @Component({
     selector: 'my-app',
@@ -72,7 +73,8 @@ import {PipeMainComponent} from "./pipe-example/pipe.main.component";
 			<router-outlet></router-outlet>
    	
     `,
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [DataService] // common for DIMasterComponent and HTTPRestMasterComponent
 
 })
 @RouteConfig([
