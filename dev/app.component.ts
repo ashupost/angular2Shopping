@@ -22,6 +22,8 @@ import {PipeMainComponent} from "./pipe-example/pipe.main.component";
 import {DataService} from "./di/di-data.service";
 import {HostListenerComponent} from "./host-listener/host-listener.component";
 
+import {QueryContainer} from "./query-list/query.container";
+
 // Let TypeScript know about the special SystemJS __moduleName variable
 declare var __moduleName: string;
 // moduleName is not set in some module loaders; set it explicitly
@@ -60,6 +62,7 @@ if (!__moduleName) {
     {path: '/pipe-example', name: 'Pipe-Example', component: PipeMainComponent},
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
     {path: '/host-listener', name: 'HostListener-Example', component: HostListenerComponent},
+    {path: '/q', name: 'QueryAppComponent-Example', component: QueryContainer},
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
 
