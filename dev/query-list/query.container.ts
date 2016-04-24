@@ -1,5 +1,19 @@
-import {Component, Query, QueryList, ViewChildren, AfterViewInit} from 'angular2/core';
+import {
+    Component, Query, QueryList, ViewChildren, AfterViewInit, ViewChild, ContentChild,
+    AfterContentInit, Directive, ContentChildren
+} from 'angular2/core';
 
+@Directive({
+      selector: 'someDir'
+     })
+ class SomeDir {
+    @ContentChild(Item) contentChild;
+    @ContentChildren(Item) contentChildren: QueryList<Item>;
+
+      ngAfterContentInit() {
+          console.log("SomeDir ngAfterContentInit");
+      }
+}
 
 @Component({
     selector: 'item',
@@ -18,16 +32,26 @@ class Item {
     <item> c </item>
    `,
     directives: [Item]
+
 })
-export class QueryContainer implements AfterViewInit{
-    shown: boolean;
-    @ViewChildren(Item) viewChildren: QueryList<Item>;
+export class QueryContainer implements AfterViewInit, AfterContentInit {
+    shown:boolean;
+    private items:QueryList<Item>;
+    @ViewChildren(Item) viewChildren:QueryList<Item>;
+    @ViewChild(Item) viewChild:Item;
+    @ContentChild(Item) contentChild;
 
-      ngAfterViewInit() {
-          //this.viewChildren.changes.subscribe(() => console.log('Length1',viewChildren.length));
-      }
+    ngAfterContentInit() {
+        console.log("ngAfterContentInit");
+    }
+
+    ngAfterViewInit() {
+        console.log("ngAfterViewInit");
+        // this.viewChild.changes.subscribe(() => console.log('Length1',viewChildren.length));
+    }
+
     constructor(@Query(Item) items:QueryList<Item>) {
-
-       // items.changes.subscribe(() => console.log('Length',items.length));
-}
+        console.log("constructor1");
+        items.changes.subscribe(_ => console.log(items));
+    }
 }
