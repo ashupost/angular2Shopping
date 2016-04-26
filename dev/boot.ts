@@ -2,7 +2,7 @@
 import {bootstrap}    from 'angular2/platform/browser';
 import {AppComponent} from './app.component';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
-import {HTTP_PROVIDERS, JSONP_PROVIDERS} from 'angular2/http';
+import {HTTP_PROVIDERS, JSONP_PROVIDERS, HTTP_BINDINGS} from 'angular2/http';
 import 'rxjs/Rx';
 import {provide} from "angular2/core";
 
