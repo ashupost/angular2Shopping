@@ -17,7 +17,7 @@ export class HTTPRestDataService {
         //  response.addHeader("Access-Control-Allow-Headers", "Content-Type");
 
         return this._http.get("http://localhost:8080/SpringMVC/rest/kfc/brands")
-            .map(this.extractData).catch(this.handleError);
+            .map(this.extractData).catch(this.handleError).share();
 
     }
     postData(value: string){

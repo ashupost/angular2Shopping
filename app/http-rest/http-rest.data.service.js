@@ -37,7 +37,7 @@ System.register(["angular2/http", "angular2/core", "rxjs/add/operator/map", "rxj
                     //  response.addHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
                     //  response.addHeader("Access-Control-Allow-Headers", "Content-Type");
                     return this._http.get("http://localhost:8080/SpringMVC/rest/kfc/brands")
-                        .map(this.extractData).catch(this.handleError);
+                        .map(this.extractData).catch(this.handleError).share();
                 };
                 HTTPRestDataService.prototype.postData = function (value) {
                     this._data.push(value);
