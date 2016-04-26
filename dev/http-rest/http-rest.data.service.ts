@@ -10,8 +10,15 @@ export class HTTPRestDataService {
 
     }
     getCall(): Observable<any>{
-        return this._http.get("package.json")
+        // return this._http.get("package.json").map(this.extractData).catch(this.handleError);
+        // Java
+        //  response.addHeader("Access-Control-Allow-Origin", "*");
+        //  response.addHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+        //  response.addHeader("Access-Control-Allow-Headers", "Content-Type");
+
+        return this._http.get("http://localhost:8080/SpringMVC/rest/kfc/brands")
             .map(this.extractData).catch(this.handleError);
+
     }
     postData(value: string){
         this._data.push(value);
