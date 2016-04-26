@@ -1,5 +1,6 @@
 import {Injectable} from 'angular2/core';
 import {Jsonp, URLSearchParams} from 'angular2/http';
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class WikipediaService {
@@ -14,10 +15,9 @@ export class WikipediaService {
         params.set('action', 'opensearch');
         params.set('format', 'json');
         params.set('callback', 'JSONP_CALLBACK');
-
+        //return Observable.forkJoin(this.jsonp.get(wikiUrl, { search: params }).map(request => <string[]> request.json()[2]));
         // TODO: Add error handling
-        return this.jsonp
-            .get(wikiUrl, { search: params })
+        return this.jsonp.get(wikiUrl, { search: params })
             .map(request => <string[]> request.json()[2]);
     }
 }

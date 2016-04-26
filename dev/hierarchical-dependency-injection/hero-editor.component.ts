@@ -24,7 +24,7 @@ export class HeroEditorComponent {
 
     @Input()
     set hero (hero: Hero) {
-       // console.log("hero=",JSON.stringify(hero));
+        console.log("hero=",JSON.stringify(hero));
         this.restoreService.setItem(hero);
     }
 

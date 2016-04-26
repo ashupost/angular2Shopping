@@ -13,6 +13,7 @@ import {Hero} from './hero';
         <li *ngFor="#editItem of heroes">
               <hero-card [hidden]="editItem.editing" [hero]="editItem.item"></hero-card>
               <button [hidden]="editItem.editing" (click)="editItem.editing = true">Edit</button>
+              <hr>
               <hero-editor 
                      (saved)="onSaved(editItem, $event)" 
                      (canceled)="onCanceled(editItem)" 
