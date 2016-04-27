@@ -33,8 +33,6 @@ import {ShoppingListService} from '../shared/shopping-list.service';
 export class RecipeDetailComponent implements OnInit{
 	recipe: Recipe;
 	private _recipeIndex: string;
-
-
 	constructor(private _routeParams: RouteParams,	private _recipeService: RecipeService,	private _router: Router, private _shoppingListService: ShoppingListService) {
 	}
 	onEdit(){
@@ -53,6 +51,7 @@ export class RecipeDetailComponent implements OnInit{
 	}
 	ngOnInit():any {
 		let itemIndex = this._routeParams.get('recipeIndex');
+		console.log('itemIndex',itemIndex);
 		this._recipeIndex = itemIndex;
 		this.recipe = this._recipeService.getRecipe(itemIndex !== null ? +itemIndex : null) || null;
 
