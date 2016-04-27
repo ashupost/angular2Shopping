@@ -45,8 +45,23 @@
     <script src="node_modules/respond.js/dest/respond.min.js"></script>
     <![endif]-->
 
-    
-  
+	<!-- Bootstrap 3.3.6 -->
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	 
+	<!-- AdminLTE App -->
+	<script src="dist/js/app.min.js"></script>
+    <script  type="text/javascript">
+                System.config({
+                    packages: {
+                        app: {
+                            format: 'register',
+                            defaultExtension: 'js'
+                        }
+                    }
+                });
+                System.import('app/boot').then(null, console.error.bind(console));
+    </script>
+	
 
 </head>
 <!--
@@ -390,17 +405,6 @@ desired effect
                 <img style="position: fixed; top: 50%; left: 50%;transform: translate(-50%, -50%);" src="dist/img/LoadingCircle_150.gif" class="img-responsive">
             </my-app>
 
-            <script>
-                System.config({
-                    packages: {
-                        app: {
-                            format: 'register',
-                            defaultExtension: 'js'
-                        }
-                    }
-                });
-                System.import('app/boot').then(null, console.error.bind(console));
-            </script>
 
 
         </section>
@@ -614,15 +618,6 @@ desired effect
     <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-<!-- AdminLTE App -->
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-
-
-<!-- Bootstrap 3.3.6 -->
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
- 
-<!-- AdminLTE App -->
-<script src="dist/js/app.min.js"></script>
 
 <!-- REQUIRED JS SCRIPTS -->
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
