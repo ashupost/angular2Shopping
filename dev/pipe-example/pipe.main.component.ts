@@ -5,7 +5,7 @@ import {TruncatePipe} from "./truncatepipe.component";
     pipes: [TruncatePipe],
     template: `
     <h3>Pipe Template Example</h3>
-    <p>{{ 'this is a not so long string' | truncate }}</p>
+    <p>{{ 'this is a not so long string' | truncate : 5 }}</p>
     <p>{{ 'this is a not so long string' | truncate : 20 }}</p>
     <p>{{ 'this is a not so long string' | truncate : 20 : '.' }}</p>
    
