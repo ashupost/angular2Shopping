@@ -21,4 +21,3 @@ export class RestoreService<T> {
         return JSON.parse(JSON.stringify(item));
     }
 }
-
