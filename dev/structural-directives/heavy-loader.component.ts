@@ -9,8 +9,7 @@ export class HeavyLoaderComponent {
     @Input() logs: string[];
     ngOnInit() {
         // Mock todo: get 10,000 rows of data from the server
-        this._log(`heavy-loader ${this.id} initialized,
-      loading 10,000 rows of data from the server`);
+        this._log(`heavy-loader ${this.id} initialized, loading 10,000 rows of data from the server`);
     }
     ngOnDestroy() {
         // Mock todo: clean-up

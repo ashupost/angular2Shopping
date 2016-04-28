@@ -9,8 +9,8 @@ import {HeavyLoaderComponent} from "./heavy-loader.component";
     directives: [UnlessDirective, HeavyLoaderComponent]  
 })
 export class StructuralDirectivesComponent {
-    heroes = ['Mr. Nice', 'Narco', 'Bombasto'];
-    hero = this.heroes[0];
+    heroes = ['AAAAAAAAAAAA', 'BBBBBBB', 'CCCCCCC'];
+    hero = this.heroes[2];
     condition = true;
     isVisible = true;
     logs: string[] = [];
