@@ -2,11 +2,12 @@ import {
     Component, Query, QueryList, ViewChildren, AfterViewInit, ViewChild, ContentChild,
     AfterContentInit, Directive, ContentChildren
 } from 'angular2/core';
+import {ViewChildrenComponent} from "./view-children.component";
 
 @Directive({
       selector: 'someDir'
-     })
- class SomeDir {
+})
+class SomeDir {
     @ContentChild(Item) contentChild;
     @ContentChildren(Item) contentChildren: QueryList<Item>;
 
@@ -17,7 +18,6 @@ import {
 
 @Component({
     selector: 'item',
-
     template: `<ng-content></ng-content>`
 })
 class Item {
@@ -25,18 +25,18 @@ class Item {
 
 @Component({
     selector: 'container',
-
     template: `
     <item> a </item>
     <item> b </item>
     <item> c </item>
+    <view-children-component></view-children-component>
    `,
-    directives: [Item]
+    directives: [Item, ViewChildrenComponent]
 
 })
 export class QueryContainer implements AfterViewInit, AfterContentInit {
     shown:boolean;
-    private items:QueryList<Item>;
+    items:QueryList<Item>;
     @ViewChildren(Item) viewChildren:QueryList<Item>;
     @ViewChild(Item) viewChild:Item;
     @ContentChild(Item) contentChild;
@@ -47,11 +47,13 @@ export class QueryContainer implements AfterViewInit, AfterContentInit {
 
     ngAfterViewInit() {
         console.log("ngAfterViewInit");
-        // this.viewChild.changes.subscribe(() => console.log('Length1',viewChildren.length));
+      //  this.viewChild.changes.subscribe(() => console.log('Length1',viewChildren.length));
     }
 
-    constructor(@Query(Item) items:QueryList<Item>) {
-        console.log("constructor1");
-        items.changes.subscribe(_ => console.log(items));
+    constructor(@Query(Item) _items:QueryList<Item>) {
+        this.items = _items;
+        console.log("constructor1 items", _items);
+        _items.changes.subscribe(_ => console.log('ggg',_items.length));
+
     }
 }
