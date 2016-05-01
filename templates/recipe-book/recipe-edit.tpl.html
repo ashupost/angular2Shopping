@@ -22,7 +22,7 @@
         </div>
         <div class="list">
         	<ul>
-        		<li *ngFor="#item of myForm.controls['ingredients'].controls; #i = index">
+        		<li *ngFor="let item of myForm.controls['ingredients'].controls; let i = index">
         			<input type="text" class="item-name"  [ngFormControl]="item.controls['name']">
         			<input type="text" class="item-amount"  [ngFormControl]="item.controls['amount']">
         			<a class="danger" (click)="onRemoveItem(i)">X</a>

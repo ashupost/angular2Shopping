@@ -23,7 +23,7 @@ import {ShoppingListService} from '../shared/shopping-list.service';
 				<div class="list-group-item">
 					<a (click)="onAddToShoppingList()" class="btn bg-orange margin" >Add all to shopping list</a>
 					<ul class="list-group">
-						<li *ngFor="#item of recipe.ingredients" class="list-group-item">{{item.name}} ({{item.amount}})</li>
+						<li *ngFor="let item of recipe.ingredients" class="list-group-item">{{item.name}} ({{item.amount}})</li>
 					</ul>
 				</div>
 			</div>    

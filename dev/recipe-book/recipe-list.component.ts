@@ -9,7 +9,7 @@ import {Router} from 'angular2/router';
 				<div class="list-group-item">
 					<button class="btn bg-orange margin" (click)="onAddRecipe()">Add Recipe Here/Click Image to Update</button>
 					<ul class="list-group">
-						<li *ngFor="#item of recipes" (click)="onSelect(item)" class="list-group-item">
+						<li *ngFor="let item of recipes" (click)="onSelect(item)" class="list-group-item">
 							<div class="panel panel-default">
 								<img [src]="item.imageUrl" alt="Recipe" title="{{item.imageUrl}}" class="img-rounded" width="120" height="96">
 							</div>
