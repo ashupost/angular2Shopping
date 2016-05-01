@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, ElementRef} from 'angular2/core';
 declare var jQuery: any;
 declare var AdminLTE: any;
 import {ROUTER_DIRECTIVES} from 'angular2/router';
@@ -9,6 +9,10 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 })
 export class IndexComponent implements OnInit{
+
+ constructor(private _elRef: ElementRef){
+
+    }
 
  ngOnInit(): any{
 

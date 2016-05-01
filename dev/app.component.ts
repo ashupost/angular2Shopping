@@ -42,11 +42,11 @@ if (!__moduleName) {
 
 })
 @RouteConfig([
-    {path: '/home', name: 'Bootstrap-Second', component: BootstrapSecondComponent},
+    {path: '/home', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
     {path: '/recipes/...', name: 'Recipes', component: RecipesComponent},
 	{path: '/shopping-list', name: 'ShoppingList', component: ShoppingListComponent},
     {path: '/my-form', name: 'My-form', component: MyFormComponent},
-    {path: '/di-demo', name: 'Di-demo', component: DIMasterComponent,  useAsDefault: true},
+    {path: '/di-demo', name: 'Di-demo', component: DIMasterComponent},
     {path: '/data-flow', name: 'Data-flow', component: DataFlowMasterComponent},
     {path: '/http-rest', name: 'Http-rest', component: HTTPRestMasterComponent},
     {path: '/contact/...', name: 'Contacts', component: ContactMasterComponent},
