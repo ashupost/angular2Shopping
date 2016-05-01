@@ -159,6 +159,8 @@ $(function () {
   //Activate the layout maker
   $.AdminLTE.layout.activate();
 
+   $.AdminLTE.layout.fix();
+
   //Enable sidebar tree view controls
   $.AdminLTE.tree('.sidebar');
 

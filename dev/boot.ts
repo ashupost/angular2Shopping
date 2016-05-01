@@ -4,6 +4,7 @@ import {AppComponent} from './app.component';
 import {LocationStrategy,HashLocationStrategy} from 'angular2/platform/common';
 import {HTTP_PROVIDERS, JSONP_PROVIDERS, HTTP_BINDINGS} from 'angular2/http';
 import 'rxjs/Rx';
+declare var jQuery: any;
 import {provide} from "angular2/core";
 import {ROUTER_PROVIDERS} from "angular2/router";
 
