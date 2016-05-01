@@ -61,7 +61,7 @@ if (!__moduleName) {
     {path: '/pipe-example', name: 'Pipe-Example', component: PipeMainComponent},
     {path: '/bootstrap', name: 'Bootstrap', component: BootstrapMainComponent},
     {path: '/host-listener', name: 'HostListener-Example', component: HostListenerComponent},
-    {path: '/q', name: 'QueryAppComponent-Example', component: QueryContainer},
+    {path: '/queryapp', name: 'QueryAppComponent', component: QueryContainer},
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
 
