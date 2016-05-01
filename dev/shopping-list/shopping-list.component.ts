@@ -12,7 +12,7 @@ import {Ingredient} from '../shared/ingredient';
 			<div class="list">
 				<button class="btn bg-orange margin" (click)="onAddItem()">Add New Item</button>
 				<ul>
-					<li *ngFor="#item of shoppingList" (click)="onSelectItem(item)">{{item.name}} {{item.amount}}</li>
+					<li *ngFor="let item of shoppingList" (click)="onSelectItem(item)">{{item.name}} {{item.amount}}</li>
 				</ul>
 			</div>    
     `

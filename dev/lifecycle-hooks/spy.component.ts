@@ -12,11 +12,11 @@ import {Spy} from './spy.directive';
       <button (click)="addHero()">Add Hero</button>
       <button (click)="reset()">Reset Heroes</button>
     </p>` +
-    `<div *ngFor="#hero of heroes"  my-spy  class="heroes">
+    `<div *ngFor="let hero of heroes"  my-spy  class="heroes">
        {{hero}}
      </div>`
     + `<h4>-- Spy Lifecycle Hook Log --</h4>
-    <div *ngFor="#msg of spyLog">{{msg}}</div>
+    <div *ngFor="let msg of spyLog">{{msg}}</div>
    </div>
   `,
     styles: [

@@ -82,7 +82,7 @@ export class AfterContentComponent implements  AfterContentChecked, AfterContent
 
     <h4>-- AfterContent Logs --</h4>
     <p><button (click)="reset()">Reset</button></p>
-    <div *ngFor="#msg of logs">{{msg}}</div>
+    <div *ngFor="let msg of logs">{{msg}}</div>
   </div>
   `,
     styles: ['.parent {background: burlywood}'],
@@ -105,9 +105,3 @@ export class AfterContentParentComponent {
     }
 }
 
-
-/*
- Copyright 2016 Google Inc. All Rights Reserved.
- Use of this source code is governed by an MIT-style license that
- can be found in the LICENSE file at http://angular.io/license
- */

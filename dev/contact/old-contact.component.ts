@@ -6,7 +6,7 @@ import {ContactComponent} from "./contact.component";
 @Component({
     template: `
    <ul>
-       <li *ngFor="#contact of contacts" (click)="onSelect(contact)" [class.clicked]="selectedContact === contact">
+       <li *ngFor="let contact of contacts" (click)="onSelect(contact)" [class.clicked]="selectedContact === contact">
                 {{contact.firstName}} {{contact.lastName}}
        </li>
    </ul>

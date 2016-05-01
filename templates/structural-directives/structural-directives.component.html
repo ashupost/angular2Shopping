@@ -47,8 +47,8 @@
 <hr>
 <!-- Examples (A) and (B) are the same -->
 <!-- (A) *ngFor div -->
-<div *ngFor="#hero of heroes">{{ hero }}</div>
+<div *ngFor="let hero of heroes">{{ hero }}</div>
 <!-- (B) ngFor with template -->
-<template ngFor #hero [ngForOf]="heroes">
+<template ngFor let hero [ngForOf]="heroes">
     <div>{{ hero }}</div>
 </template>
