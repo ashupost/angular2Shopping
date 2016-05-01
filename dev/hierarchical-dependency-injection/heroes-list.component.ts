@@ -10,7 +10,7 @@ import {Hero} from './hero';
     template: `
     <div>
       <ul>
-        <li *ngFor="#editItem of heroes">
+        <li *ngFor="let editItem of heroes">
               <hero-card [hidden]="editItem.editing" [hero]="editItem.item"></hero-card>
               <button [hidden]="editItem.editing" (click)="editItem.editing = true">Edit</button>
               <hr>
