@@ -21,7 +21,7 @@ import {RXJSComponent} from "./rx-js/rx-js.component";
 import {PipeMainComponent} from "./pipe-example/pipe.main.component";
 import {DataService} from "./di/di-data.service";
 import {HostListenerComponent} from "./host-listener/host-listener.component";
-
+import {IndexComponent} from "./index/index.component";
 import {QueryContainer} from "./query-list/query.container";
 
 // Let TypeScript know about the special SystemJS __moduleName variable
@@ -35,10 +35,9 @@ if (!__moduleName) {
     moduleId: __moduleName,
     selector: 'my-app',
     template: `
-           <p><a [routerLink]="['Recipes']">Recipes</a></p>
-  			<router-outlet></router-outlet>
+           <my-index>Loading.....</my-index>
    `,
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, IndexComponent],
     providers: [DataService] // common for DIMasterComponent and HTTPRestMasterComponent
 
 })
