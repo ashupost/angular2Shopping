@@ -31,7 +31,7 @@
     <heavy-loader *ngIf="condition" [logs]="logs"></heavy-loader>
 </div>
 <h4>heavy-loader log:</h4>
-<div *ngFor="#message of logs">{{message}}</div>
+<div *ngFor="let message of logs">{{message}}</div>
 
 <!-- Examples (A) and (B) are the same -->
 <!-- (A) *ngIf paragraph -->
