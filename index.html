@@ -45,11 +45,9 @@
     <script src="node_modules/respond.js/dest/respond.min.js"></script>
     <![endif]-->
 
-	<!-- Bootstrap 3.3.6 -->
-	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	 
 	<!-- AdminLTE App -->
-	<script src="dist/js/app.js"></script>
+	
     <script  type="text/javascript">
                 System.config({
                     packages: {
@@ -60,6 +58,8 @@
                     }
                 });
                 System.import('app/boot').then(null, console.error.bind(console));
+				
+
 
               
     </script>
@@ -95,7 +95,22 @@ desired effect
         </img>
     </my-app>
 
- 
+ <script  type="text/javascript">
+ var AdminLTEOptions = {
+    //Enable sidebar expand on hover effect for sidebar mini
+    //This option is forced to true if both the fixed layout and sidebar mini
+    //are used together
+    sidebarExpandOnHover: true,
+    //BoxRefresh Plugin
+    enableBoxRefresh: true,
+    //Bootstrap.js tooltip
+    enableBSToppltip: true
+  };
+ </script>
+	<!-- Bootstrap 3.3.6 -->
+ <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+ <script src="dist/js/app.js"></script>
     
 <!-- REQUIRED JS SCRIPTS -->
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
