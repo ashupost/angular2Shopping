@@ -123,7 +123,8 @@ body {
 @media (max-width: 767px) {
   .fixed .content-wrapper,
   .fixed .right-side {
-    padding-top: 100px;
+   /* Mritunjay 
+   padding-top: 100px; */
   }
 }
 .fixed.layout-boxed .wrapper {
