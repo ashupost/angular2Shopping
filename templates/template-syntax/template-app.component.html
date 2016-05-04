@@ -1,50 +1,10 @@
-<a id="toc"></a>
-<h1>Template Syntax</h1>
-<a href="#interpolation">Interpolation</a><br>
-<a href="#mental-model">Mental Model</a><br>
-<a href="#buttons">Buttons</a><br>
-<a href="#prop-vs-attrib">Properties vs. Attributes</a><br>
-<br>
-<a href="#property-binding">Property Binding</a><br>
-<div style="margin-left:8px">
-    <a href="#attribute-binding">Attribute Binding</a><br>
-    <a href="#class-binding">Class Binding</a><br>
-    <a href="#style-binding">Style Binding</a><br>
-</div>
-<br>
-<a href="#event-binding">Event Binding</a><br>
-
-<br>
 <div>Directives</div>
 <div style="margin-left:8px">
    
-<!-- Interpolation and expressions -->
-<hr><h2 id="interpolation">Interpolation</h2>
-
-<p>My current hero is {{currentHero.firstName}}</p>
-
-<h3>
-    {{title}}
-    <img src="{{heroImageUrl}}" style="height:30px">
-</h3>
-
-
 <!-- "The sum of 1 + 1 is not 4" -->
 <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
 
 <a class="to-toc" href="#toc">top</a>
-
-<!-- New Mental Model -->
-<hr><h2 id="mental-model">New Mental Model</h2>
-
-
-<div>
-    <!-- Normal HTML -->
-    <div class="special">Mental Model</div>
-    <!-- Wow! A new element! -->
-    <hero-detail></hero-detail>
-</div>
-<br><br>
 
 <div>
     <!-- Bind button disabled state to `isUnchanged` property -->
@@ -80,7 +40,6 @@
 <button [style.color] = "isSpecial ? 'red' : 'green'">
     button</button>
 
-<a class="to-toc" href="#toc">top11111111111111111</a>
 
 <!-- property vs. attribute -->
 <hr><h2 id="prop-vs-attrib">Property vs. Attribute (img examples)</h2>
@@ -94,12 +53,6 @@
 <img bind-src="heroImageUrl"/>
 <img [attr.src]="villainImageUrl"/>
 
-<a class="to-toc" href="#toc">top</a>
-
-<!-- buttons -->
-<hr><h2 id="buttons">Buttons</h2>
-
-<button>Enabled (but does nothing)</button>
 <button disabled>Disabled</button>
 <button disabled=false>Still disabled</button>
 <br><br>
@@ -191,18 +144,12 @@ Property bound: <img [src]="heroImageUrl">
 
 <div bind-class.special="isSpecial">This class binding is special too</div>
 
-<a class="to-toc" href="#toc">top</a>
-
-<!--style binding -->
-<hr><h2 id="style-binding">Style Binding</h2>
 
 <button [style.color] = "isSpecial ? 'red' : 'green'">Red</button>
-<button [style.backgroundColor]="canSave ?'cyan' : 'grey'" >Save</button>
+<button [style.backgroundColor]="canSave ?'cyan' : 'grey'" >Save11111111111111122</button>
 
 <button [style.fontSize.em]="isSpecial ? 3 : 1" >Big</button>
 <button [style.fontSize.%]="!isSpecial ? 150 : 50" >Small</button>
-
-<a class="to-toc" href="#toc">top</a>
 
 <!-- event binding -->
 <hr><h2 id="event-binding">Event Binding</h2>
@@ -409,7 +356,7 @@ bindon-ngModel
 <p>with <i>comma</i> separator</p>
 <div class="box">
     <!-- Ex: "1 - Hercules Son of Zeus"" -->
-    <div *ngFor="#hero of heroes, #i=index">{{i + 1}} - {{hero.fullName}}</div>
+    <div *ngFor="let hero of heroes, let i=index">{{i + 1}} - {{hero.fullName}}</div>
 </div>
 
 <a class="to-toc" href="#toc">top</a>
@@ -474,7 +421,7 @@ bindon-ngModel
 <h3>*ngFor expansion</h3>
 <p><i>*ngFor</i></p>
 <!-- *ngFor w/ hero-detail Component -->
-<hero-detail *ngFor="#hero of heroes; trackBy:trackByHeroes" [hero]="hero"></hero-detail>
+<hero-detail *ngFor="let hero of heroes; trackBy:trackByHeroes" [hero]="hero"></hero-detail>
 
 <p><i>expand to template = "..."</i></p>
 <div class="box">
@@ -609,16 +556,3 @@ See console log
 <p>The name of the Color.Red enum is {{Color[Color.Red]}}</p>
 <p>The current color number is {{color}}</p>
 <p><button [style.color]="Color[color]" (click)="colorToggle()">Enum Toggle</button>
-
-    <a class="to-toc" href="#toc">top</a>
-
-<h3>My First Angular Application</h3>
-
-<a class="to-toc" href="#toc">top</a>
-
-
-<!--
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->
