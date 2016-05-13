@@ -5,8 +5,8 @@ class CountClicks {
     numberOfClicks = 0;
     @Output() changed = new EventEmitter();
 
-   @HostListener('click', ['$event.target'])
-   onClick(btn) {
+    @HostListener('click', ['$event.target'])
+    onClick(btn) {
        //console.log("button", btn, "number of clicks:", this.numberOfClicks++);
        this.changed.emit(this.numberOfClicks++);
     }
@@ -19,7 +19,7 @@ class CountClicks {
  })
  export class HostListenerComponent {
      text:string;
-     onChange(value){
+    onChange(value){
          this.text= value;
      }
  }

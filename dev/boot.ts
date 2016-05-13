@@ -1,12 +1,11 @@
-///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
-import {bootstrap}    from 'angular2/platform/browser';
+import { bootstrap }    from '@angular/platform-browser-dynamic';
 import {AppComponent} from './app.component';
-import {LocationStrategy,HashLocationStrategy} from 'angular2/platform/common';
-import {HTTP_PROVIDERS, JSONP_PROVIDERS, HTTP_BINDINGS} from 'angular2/http';
+import {LocationStrategy,HashLocationStrategy} from '@angular/common';
+import {HTTP_PROVIDERS, JSONP_PROVIDERS, HTTP_BINDINGS} from '@angular/http';
 import 'rxjs/Rx';
 declare var jQuery: any;
-import {provide} from "angular2/core";
-import {ROUTER_PROVIDERS} from "angular2/router";
+import {provide}  from '@angular/core';
+import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 
 bootstrap(AppComponent,
     [ROUTER_PROVIDERS,

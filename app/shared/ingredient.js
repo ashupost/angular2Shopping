@@ -1,20 +1,11 @@
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    var Ingredient;
-    return {
-        setters:[],
-        execute: function() {
-            Ingredient = (function () {
-                function Ingredient(name, amount) {
-                    this.name = name;
-                    this.amount = amount;
-                }
-                return Ingredient;
-            }());
-            exports_1("Ingredient", Ingredient);
-        }
+"use strict";
+var Ingredient = (function () {
+    function Ingredient(name, amount) {
+        this.name = name;
+        this.amount = amount;
     }
-});
+    return Ingredient;
+}());
+exports.Ingredient = Ingredient;
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNoYXJlZC9pbmdyZWRpZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7WUFBQTtnQkFJQyxvQkFBWSxJQUFZLEVBQUUsTUFBYztvQkFDdkMsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7b0JBQ2pCLElBQUksQ0FBQyxNQUFNLEdBQUcsTUFBTSxDQUFDO2dCQUN0QixDQUFDO2dCQUNGLGlCQUFDO1lBQUQsQ0FSQSxBQVFDLElBQUE7WUFSRCxtQ0FRQyxDQUFBIiwiZmlsZSI6InNoYXJlZC9pbmdyZWRpZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNsYXNzIEluZ3JlZGllbnQge1xyXG5cdG5hbWU6IHN0cmluZztcclxuXHRhbW91bnQ6IG51bWJlcjtcclxuXHJcblx0Y29uc3RydWN0b3IobmFtZTogc3RyaW5nLCBhbW91bnQ6IG51bWJlcil7XHJcblx0XHR0aGlzLm5hbWUgPSBuYW1lO1xyXG5cdFx0dGhpcy5hbW91bnQgPSBhbW91bnQ7XHJcblx0fVxyXG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNoYXJlZC9pbmdyZWRpZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTtJQUlDLG9CQUFZLElBQVksRUFBRSxNQUFjO1FBQ3ZDLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ2pCLElBQUksQ0FBQyxNQUFNLEdBQUcsTUFBTSxDQUFDO0lBQ3RCLENBQUM7SUFDRixpQkFBQztBQUFELENBUkEsQUFRQyxJQUFBO0FBUlksa0JBQVUsYUFRdEIsQ0FBQSIsImZpbGUiOiJzaGFyZWQvaW5ncmVkaWVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBJbmdyZWRpZW50IHtcclxuXHRuYW1lOiBzdHJpbmc7XHJcblx0YW1vdW50OiBudW1iZXI7XHJcblxyXG5cdGNvbnN0cnVjdG9yKG5hbWU6IHN0cmluZywgYW1vdW50OiBudW1iZXIpe1xyXG5cdFx0dGhpcy5uYW1lID0gbmFtZTtcclxuXHRcdHRoaXMuYW1vdW50ID0gYW1vdW50O1xyXG5cdH1cclxufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==

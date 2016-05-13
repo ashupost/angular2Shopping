@@ -1,5 +1,8 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, AuxRoute} from 'angular2/router';
+import {Component} from '@angular/core';
+import {AuxRoute} from 'angular2/router';
+
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
+
 import {RecipesComponent} from './recipe-book/recipes.component';
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {MyFormComponent} from './my-form/my-form.component';
