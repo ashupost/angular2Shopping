@@ -1,4 +1,4 @@
-import {Injectable} from 'angular2/core';
+import {Injectable} from '@angular/core';
 import {Recipe} from '../shared/recipe';
 import {RECIPES} from '../mock/recipes';
 @Injectable()

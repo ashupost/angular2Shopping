@@ -1,6 +1,6 @@
-import {Component, OnInit} from 'angular2/core';
-import {ControlGroup, ControlArray, Control, Validators, FormBuilder} from 'angular2/common';
-import {RouteParams, Router, CanDeactivate, ComponentInstruction} from 'angular2/router';
+import {Component, OnInit} from '@angular/core';
+import {ControlGroup, ControlArray, Control, Validators, FormBuilder} from '@angular/common';
+import {RouteParams, Router, CanDeactivate, ComponentInstruction} from '@angular/router';
 import {Recipe} from '../shared/recipe';
 import {RecipeService} from './recipe.service';
 

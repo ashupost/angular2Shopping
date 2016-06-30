@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, AuxRoute} from 'angular2/router';
+import {Component} from '@angular/core';
+import { ROUTER_DIRECTIVES} from '@angular/router';
+import { provideRouter, RouterConfig }  from '@angular/router';
 import {RecipesComponent} from './recipe-book/recipes.component';
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {MyFormComponent} from './my-form/my-form.component';
@@ -41,10 +42,12 @@ if (!__moduleName) {
     providers: [DataService] // common for DIMasterComponent and HTTPRestMasterComponent
 
 })
-@RouteConfig([
+
+
+export const routes: RouterConfig = [
     {path: '/home', name: 'Bootstrap-Second', component: BootstrapSecondComponent,  useAsDefault: true},
     {path: '/recipes/...', name: 'Recipes', component: RecipesComponent},
-	{path: '/shopping-list', name: 'ShoppingList', component: ShoppingListComponent},
+    {path: '/shopping-list', name: 'ShoppingList', component: ShoppingListComponent},
     {path: '/my-form', name: 'My-form', component: MyFormComponent},
     {path: '/di-demo', name: 'Di-Demo', component: DIMasterComponent},
     {path: '/data-flow', name: 'Data-flow', component: DataFlowMasterComponent},
@@ -64,7 +67,8 @@ if (!__moduleName) {
     {path: '/queryapp', name: 'QueryAppComponent', component: QueryContainer},
     {path: '/bootstrap-third', name: 'Bootstrap-Third', component: BootstrapThirdComponent}
 
+];
 
-])
-export class AppComponent {
-}
+export const APP_ROUTER_PROVIDERS = [
+    provideRouter(routes)
+];

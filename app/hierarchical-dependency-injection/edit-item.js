@@ -1,18 +1,10 @@
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    var EditItem;
-    return {
-        setters:[],
-        execute: function() {
-            EditItem = (function () {
-                function EditItem(item) {
-                    this.item = item;
-                }
-                return EditItem;
-            }());
-            exports_1("EditItem", EditItem);
-        }
+"use strict";
+var EditItem = (function () {
+    function EditItem(item) {
+        this.item = item;
     }
-});
-//# sourceMappingURL=edit-item.js.map
+    return EditItem;
+}());
+exports.EditItem = EditItem;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhpZXJhcmNoaWNhbC1kZXBlbmRlbmN5LWluamVjdGlvbi9lZGl0LWl0ZW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBO0lBRUksa0JBQW9CLElBQU87UUFBUCxTQUFJLEdBQUosSUFBSSxDQUFHO0lBQUssQ0FBQztJQUNyQyxlQUFDO0FBQUQsQ0FIQSxBQUdDLElBQUE7QUFIWSxnQkFBUSxXQUdwQixDQUFBIiwiZmlsZSI6ImhpZXJhcmNoaWNhbC1kZXBlbmRlbmN5LWluamVjdGlvbi9lZGl0LWl0ZW0uanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgRWRpdEl0ZW08VD4ge1xyXG4gICAgZWRpdGluZzogYm9vbGVhblxyXG4gICAgY29uc3RydWN0b3IgKHB1YmxpYyBpdGVtOiBUKSB7ICB9XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

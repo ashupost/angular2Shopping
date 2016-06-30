@@ -1,140 +1,56 @@
-System.register(['angular2/core', 'angular2/router', './recipe-book/recipes.component', './shopping-list/shopping-list.component', './my-form/my-form.component', "./di/di-master.compoment", "./data-flow/master.component", "./http-rest/http-rest.master.component", "./contact/contact.master.component", "./structural-directives/structural-directives.component", "./lifecycle-hooks/lifecycle-component", "./jquery/jquery.component", "./wiki-http/wiki-http.main.component", "./hierarchical-dependency-injection/hierarchical-dependency-injection.component", "./bootstrap/bootstrap-main.component", "./attribute-directive/attrubute-directive.app.component", "./bootstrap/bootstrap-second.component", "./bootstrap/bootstrap-third.component", "./template-syntax/template.app.component", "./rx-js/rx-js.component", "./pipe-example/pipe.main.component", "./di/di-data.service", "./host-listener/host-listener.component", "./index/index.component", "./query-list/query.container"], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
-    var __metadata = (this && this.__metadata) || function (k, v) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-    };
-    var core_1, router_1, recipes_component_1, shopping_list_component_1, my_form_component_1, di_master_compoment_1, master_component_1, http_rest_master_component_1, contact_master_component_1, structural_directives_component_1, lifecycle_component_1, jquery_component_1, wiki_http_main_component_1, hierarchical_dependency_injection_component_1, bootstrap_main_component_1, attrubute_directive_app_component_1, bootstrap_second_component_1, bootstrap_third_component_1, template_app_component_1, rx_js_component_1, pipe_main_component_1, di_data_service_1, host_listener_component_1, index_component_1, query_container_1;
-    var AppComponent;
-    return {
-        setters:[
-            function (core_1_1) {
-                core_1 = core_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
-            },
-            function (recipes_component_1_1) {
-                recipes_component_1 = recipes_component_1_1;
-            },
-            function (shopping_list_component_1_1) {
-                shopping_list_component_1 = shopping_list_component_1_1;
-            },
-            function (my_form_component_1_1) {
-                my_form_component_1 = my_form_component_1_1;
-            },
-            function (di_master_compoment_1_1) {
-                di_master_compoment_1 = di_master_compoment_1_1;
-            },
-            function (master_component_1_1) {
-                master_component_1 = master_component_1_1;
-            },
-            function (http_rest_master_component_1_1) {
-                http_rest_master_component_1 = http_rest_master_component_1_1;
-            },
-            function (contact_master_component_1_1) {
-                contact_master_component_1 = contact_master_component_1_1;
-            },
-            function (structural_directives_component_1_1) {
-                structural_directives_component_1 = structural_directives_component_1_1;
-            },
-            function (lifecycle_component_1_1) {
-                lifecycle_component_1 = lifecycle_component_1_1;
-            },
-            function (jquery_component_1_1) {
-                jquery_component_1 = jquery_component_1_1;
-            },
-            function (wiki_http_main_component_1_1) {
-                wiki_http_main_component_1 = wiki_http_main_component_1_1;
-            },
-            function (hierarchical_dependency_injection_component_1_1) {
-                hierarchical_dependency_injection_component_1 = hierarchical_dependency_injection_component_1_1;
-            },
-            function (bootstrap_main_component_1_1) {
-                bootstrap_main_component_1 = bootstrap_main_component_1_1;
-            },
-            function (attrubute_directive_app_component_1_1) {
-                attrubute_directive_app_component_1 = attrubute_directive_app_component_1_1;
-            },
-            function (bootstrap_second_component_1_1) {
-                bootstrap_second_component_1 = bootstrap_second_component_1_1;
-            },
-            function (bootstrap_third_component_1_1) {
-                bootstrap_third_component_1 = bootstrap_third_component_1_1;
-            },
-            function (template_app_component_1_1) {
-                template_app_component_1 = template_app_component_1_1;
-            },
-            function (rx_js_component_1_1) {
-                rx_js_component_1 = rx_js_component_1_1;
-            },
-            function (pipe_main_component_1_1) {
-                pipe_main_component_1 = pipe_main_component_1_1;
-            },
-            function (di_data_service_1_1) {
-                di_data_service_1 = di_data_service_1_1;
-            },
-            function (host_listener_component_1_1) {
-                host_listener_component_1 = host_listener_component_1_1;
-            },
-            function (index_component_1_1) {
-                index_component_1 = index_component_1_1;
-            },
-            function (query_container_1_1) {
-                query_container_1 = query_container_1_1;
-            }],
-        execute: function() {
-            // moduleName is not set in some module loaders; set it explicitly
-            if (!__moduleName) {
-                __moduleName = "http://" + location.host + "/" + location.pathname + "/app/";
-            }
-            //console.log(`The __moduleName is ${__moduleName} `);
-            AppComponent = (function () {
-                function AppComponent() {
-                }
-                AppComponent = __decorate([
-                    core_1.Component({
-                        moduleId: __moduleName,
-                        selector: 'my-app',
-                        template: "\n           <my-index>Loading.....</my-index>\n   ",
-                        directives: [router_1.ROUTER_DIRECTIVES, index_component_1.IndexComponent],
-                        providers: [di_data_service_1.DataService] // common for DIMasterComponent and HTTPRestMasterComponent
-                    }),
-                    router_1.RouteConfig([
-                        { path: '/home', name: 'Bootstrap-Second', component: bootstrap_second_component_1.BootstrapSecondComponent, useAsDefault: true },
-                        { path: '/recipes/...', name: 'Recipes', component: recipes_component_1.RecipesComponent },
-                        { path: '/shopping-list', name: 'ShoppingList', component: shopping_list_component_1.ShoppingListComponent },
-                        { path: '/my-form', name: 'My-form', component: my_form_component_1.MyFormComponent },
-                        { path: '/di-demo', name: 'Di-Demo', component: di_master_compoment_1.DIMasterComponent },
-                        { path: '/data-flow', name: 'Data-flow', component: master_component_1.DataFlowMasterComponent },
-                        { path: '/http-rest', name: 'Http-Rest', component: http_rest_master_component_1.HTTPRestMasterComponent },
-                        { path: '/contact/...', name: 'Contacts', component: contact_master_component_1.ContactMasterComponent },
-                        { path: '/structural', name: 'Structural', component: structural_directives_component_1.StructuralDirectivesComponent },
-                        { path: '/lifecycle', name: 'Lifecycle', component: lifecycle_component_1.LifecycleComponent },
-                        { path: '/jquery', name: 'JQuery', component: jquery_component_1.JqueryComponent },
-                        { path: '/wiki-http', name: 'Wiki-Http', component: wiki_http_main_component_1.WikiHttpMainComponent },
-                        { path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: hierarchical_dependency_injection_component_1.HierarchicalDependencyInjectionComponent },
-                        { path: '/template-syntax', name: 'Template-Syntax', component: template_app_component_1.TemplateAppComponent },
-                        { path: '/attribute-directive', name: 'Attribute-Directive', component: attrubute_directive_app_component_1.AttributeDirectiveAppComponent },
-                        { path: '/rx-js', name: 'Rx-Js', component: rx_js_component_1.RXJSComponent },
-                        { path: '/pipe-example', name: 'Pipe-Example', component: pipe_main_component_1.PipeMainComponent },
-                        { path: '/bootstrap', name: 'Bootstrap', component: bootstrap_main_component_1.BootstrapMainComponent },
-                        { path: '/host-listener', name: 'HostListener-Example', component: host_listener_component_1.HostListenerComponent },
-                        { path: '/queryapp', name: 'QueryAppComponent', component: query_container_1.QueryContainer },
-                        { path: '/bootstrap-third', name: 'Bootstrap-Third', component: bootstrap_third_component_1.BootstrapThirdComponent }
-                    ]), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
-            }());
-            exports_1("AppComponent", AppComponent);
-        }
-    }
-});
-//# sourceMappingURL=app.component.js.map
+"use strict";
+var router_1 = require('@angular/router');
+var recipes_component_1 = require('./recipe-book/recipes.component');
+var shopping_list_component_1 = require('./shopping-list/shopping-list.component');
+var my_form_component_1 = require('./my-form/my-form.component');
+var di_master_compoment_1 = require("./di/di-master.compoment");
+var master_component_1 = require("./data-flow/master.component");
+var http_rest_master_component_1 = require("./http-rest/http-rest.master.component");
+var contact_master_component_1 = require("./contact/contact.master.component");
+var structural_directives_component_1 = require("./structural-directives/structural-directives.component");
+var lifecycle_component_1 = require("./lifecycle-hooks/lifecycle-component");
+var jquery_component_1 = require("./jquery/jquery.component");
+var wiki_http_main_component_1 = require("./wiki-http/wiki-http.main.component");
+var hierarchical_dependency_injection_component_1 = require("./hierarchical-dependency-injection/hierarchical-dependency-injection.component");
+var bootstrap_main_component_1 = require("./bootstrap/bootstrap-main.component");
+var attrubute_directive_app_component_1 = require("./attribute-directive/attrubute-directive.app.component");
+var bootstrap_second_component_1 = require("./bootstrap/bootstrap-second.component");
+var bootstrap_third_component_1 = require("./bootstrap/bootstrap-third.component");
+var template_app_component_1 = require("./template-syntax/template.app.component");
+var rx_js_component_1 = require("./rx-js/rx-js.component");
+var pipe_main_component_1 = require("./pipe-example/pipe.main.component");
+var host_listener_component_1 = require("./host-listener/host-listener.component");
+var query_container_1 = require("./query-list/query.container");
+// moduleName is not set in some module loaders; set it explicitly
+if (!__moduleName) {
+    __moduleName = "http://" + location.host + "/" + location.pathname + "/app/";
+}
+//console.log(`The __moduleName is ${__moduleName} `);
+exports.routes = [
+    { path: '/home', name: 'Bootstrap-Second', component: bootstrap_second_component_1.BootstrapSecondComponent, useAsDefault: true },
+    { path: '/recipes/...', name: 'Recipes', component: recipes_component_1.RecipesComponent },
+    { path: '/shopping-list', name: 'ShoppingList', component: shopping_list_component_1.ShoppingListComponent },
+    { path: '/my-form', name: 'My-form', component: my_form_component_1.MyFormComponent },
+    { path: '/di-demo', name: 'Di-Demo', component: di_master_compoment_1.DIMasterComponent },
+    { path: '/data-flow', name: 'Data-flow', component: master_component_1.DataFlowMasterComponent },
+    { path: '/http-rest', name: 'Http-Rest', component: http_rest_master_component_1.HTTPRestMasterComponent },
+    { path: '/contact/...', name: 'Contacts', component: contact_master_component_1.ContactMasterComponent },
+    { path: '/structural', name: 'Structural', component: structural_directives_component_1.StructuralDirectivesComponent },
+    { path: '/lifecycle', name: 'Lifecycle', component: lifecycle_component_1.LifecycleComponent },
+    { path: '/jquery', name: 'JQuery', component: jquery_component_1.JqueryComponent },
+    { path: '/wiki-http', name: 'Wiki-Http', component: wiki_http_main_component_1.WikiHttpMainComponent },
+    { path: '/hierarchical-dependency-injection', name: 'Hierarchical-Dependency-Injection', component: hierarchical_dependency_injection_component_1.HierarchicalDependencyInjectionComponent },
+    { path: '/template-syntax', name: 'Template-Syntax', component: template_app_component_1.TemplateAppComponent },
+    { path: '/attribute-directive', name: 'Attribute-Directive', component: attrubute_directive_app_component_1.AttributeDirectiveAppComponent },
+    { path: '/rx-js', name: 'Rx-Js', component: rx_js_component_1.RXJSComponent },
+    { path: '/pipe-example', name: 'Pipe-Example', component: pipe_main_component_1.PipeMainComponent },
+    { path: '/bootstrap', name: 'Bootstrap', component: bootstrap_main_component_1.BootstrapMainComponent },
+    { path: '/host-listener', name: 'HostListener-Example', component: host_listener_component_1.HostListenerComponent },
+    { path: '/queryapp', name: 'QueryAppComponent', component: query_container_1.QueryContainer },
+    { path: '/bootstrap-third', name: 'Bootstrap-Third', component: bootstrap_third_component_1.BootstrapThirdComponent }
+];
+exports.APP_ROUTER_PROVIDERS = [
+    router_1.provideRouter(exports.routes)
+];
+
+//# sourceMappingURL=data:application/json;base64,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LElBQUksRUFBRSxvQ0FBb0MsRUFBRSxJQUFJLEVBQUUsbUNBQW1DLEVBQUUsU0FBUyxFQUFFLHNGQUF3QyxFQUFDO0lBQzVJLEVBQUMsSUFBSSxFQUFFLGtCQUFrQixFQUFFLElBQUksRUFBRSxpQkFBaUIsRUFBRSxTQUFTLEVBQUUsNkNBQW9CLEVBQUM7SUFDcEYsRUFBQyxJQUFJLEVBQUUsc0JBQXNCLEVBQUUsSUFBSSxFQUFFLHFCQUFxQixFQUFFLFNBQVMsRUFBRSxrRUFBOEIsRUFBQztJQUN0RyxFQUFDLElBQUksRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxTQUFTLEVBQUUsK0JBQWEsRUFBQztJQUN6RCxFQUFDLElBQUksRUFBRSxlQUFlLEVBQUUsSUFBSSxFQUFFLGNBQWMsRUFBRSxTQUFTLEVBQUUsdUNBQWlCLEVBQUM7SUFDM0UsRUFBQyxJQUFJLEVBQUUsWUFBWSxFQUFFLElBQUksRUFBRSxXQUFXLEVBQUUsU0FBUyxFQUFFLGlEQUFzQixFQUFDO0lBQzFFLEVBQUMsSUFBSSxFQUFFLGdCQUFnQixFQUFFLElBQUksRUFBRSxzQkFBc0IsRUFBRSxTQUFTLEVBQUUsK0NBQXFCLEVBQUM7SUFDeEYsRUFBQyxJQUFJLEVBQUUsV0FBVyxFQUFFLElBQUksRUFBRSxtQkFBbUIsRUFBRSxTQUFTLEVBQUUsZ0NBQWMsRUFBQztJQUN6RSxFQUFDLElBQUksRUFBRSxrQkFBa0IsRUFBRSxJQUFJLEVBQUUsaUJBQWlCLEVBQUUsU0FBUyxFQUFFLG1EQUF1QixFQUFDO0NBRTFGLENBQUM7QUFFVyw0QkFBb0IsR0FBRztJQUNoQyxzQkFBYSxDQUFDLGNBQU0sQ0FBQztDQUN4QixDQUFDIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBST1VURVJfRElSRUNUSVZFU30gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcbmltcG9ydCB7IHByb3ZpZGVSb3V0ZXIsIFJvdXRlckNvbmZpZyB9ICBmcm9tICdAYW5ndWxhci9yb3V0ZXInO1xuaW1wb3J0IHtSZWNpcGVzQ29tcG9uZW50fSBmcm9tICcuL3JlY2lwZS1ib29rL3JlY2lwZXMuY29tcG9uZW50JztcbmltcG9ydCB7U2hvcHBpbmdMaXN0Q29tcG9uZW50fSBmcm9tICcuL3Nob3BwaW5nLWxpc3Qvc2hvcHBpbmctbGlzdC5jb21wb25lbnQnO1xuaW1wb3J0IHtNeUZvcm1Db21wb25lbnR9IGZyb20gJy4vbXktZm9ybS9teS1mb3JtLmNvbXBvbmVudCc7XG5pbXBvcnQge0RJTWFzdGVyQ29tcG9uZW50fSBmcm9tIFwiLi9kaS9kaS1tYXN0ZXIuY29tcG9tZW50XCI7XG5pbXBvcnQge0RhdGFGbG93TWFzdGVyQ29tcG9uZW50fSBmcm9tIFwiLi9kYXRhLWZsb3cvbWFzdGVyLmNvbXBvbmVudFwiO1xuaW1wb3J0IHtIVFRQUmVzdE1hc3RlckNvbXBvbmVudH0gZnJvbSBcIi4vaHR0cC1yZXN0L2h0dHAtcmVzdC5tYXN0ZXIuY29tcG9uZW50XCI7XG5pbXBvcnQge0NvbnRhY3RNYXN0ZXJDb21wb25lbnR9IGZyb20gXCIuL2NvbnRhY3QvY29udGFjdC5tYXN0ZXIuY29tcG9uZW50XCI7XG5pbXBvcnQge1N0cnVjdHVyYWxEaXJlY3RpdmVzQ29tcG9uZW50fSBmcm9tIFwiLi9zdHJ1Y3R1cmFsLWRpcmVjdGl2ZXMvc3RydWN0dXJhbC1kaXJlY3RpdmVzLmNvbXBvbmVudFwiO1xuaW1wb3J0IHtMaWZlY3ljbGVDb21wb25lbnR9IGZyb20gXCIuL2xpZmVjeWNsZS1ob29rcy9saWZlY3ljbGUtY29tcG9uZW50XCI7XG5pbXBvcnQge0pxdWVyeUNvbXBvbmVudH0gZnJvbSBcIi4vanF1ZXJ5L2pxdWVyeS5jb21wb25lbnRcIjtcbmltcG9ydCB7V2lraUh0dHBNYWluQ29tcG9uZW50fSBmcm9tIFwiLi93aWtpLWh0dHAvd2lraS1odHRwLm1haW4uY29tcG9uZW50XCI7XG5pbXBvcnQge0hpZXJhcmNoaWNhbERlcGVuZGVuY3lJbmplY3Rpb25Db21wb25lbnR9IGZyb20gXCIuL2hpZXJhcmNoaWNhbC1kZXBlbmRlbmN5LWluamVjdGlvbi9oaWVyYXJjaGljYWwtZGVwZW5kZW5jeS1pbmplY3Rpb24uY29tcG9uZW50XCI7XG5pbXBvcnQge0Jvb3RzdHJhcE1haW5Db21wb25lbnR9IGZyb20gXCIuL2Jvb3RzdHJhcC9ib290c3RyYXAtbWFpbi5jb21wb25lbnRcIjtcbmltcG9ydCB7QXR0cmlidXRlRGlyZWN0aXZlQXBwQ29tcG9uZW50fSBmcm9tIFwiLi9hdHRyaWJ1dGUtZGlyZWN0aXZlL2F0dHJ1YnV0ZS1kaXJlY3RpdmUuYXBwLmNvbXBvbmVudFwiO1xuaW1wb3J0IHtCb290c3RyYXBTZWNvbmRDb21wb25lbnR9IGZyb20gXCIuL2Jvb3RzdHJhcC9ib290c3RyYXAtc2Vjb25kLmNvbXBvbmVudFwiO1xuaW1wb3J0IHtCb290c3RyYXBUaGlyZENvbXBvbmVudH0gZnJvbSBcIi4vYm9vdHN0cmFwL2Jvb3RzdHJhcC10aGlyZC5jb21wb25lbnRcIjtcbmltcG9ydCB7VGVtcGxhdGVBcHBDb21wb25lbnR9IGZyb20gXCIuL3RlbXBsYXRlLXN5bnRheC90ZW1wbGF0ZS5hcHAuY29tcG9uZW50XCI7XG5pbXBvcnQge1JYSlNDb21wb25lbnR9IGZyb20gXCIuL3J4LWpzL3J4LWpzLmNvbXBvbmVudFwiO1xuaW1wb3J0IHtQaXBlTWFpbkNvbXBvbmVudH0gZnJvbSBcIi4vcGlwZS1leGFtcGxlL3BpcGUubWFpbi5jb21wb25lbnRcIjtcbmltcG9ydCB7RGF0YVNlcnZpY2V9IGZyb20gXCIuL2RpL2RpLWRhdGEuc2VydmljZVwiO1xuaW1wb3J0IHtIb3N0TGlzdGVuZXJDb21wb25lbnR9IGZyb20gXCIuL2hvc3QtbGlzdGVuZXIvaG9zdC1saXN0ZW5lci5jb21wb25lbnRcIjtcbmltcG9ydCB7SW5kZXhDb21wb25lbnR9IGZyb20gXCIuL2luZGV4L2luZGV4LmNvbXBvbmVudFwiO1xuaW1wb3J0IHtRdWVyeUNvbnRhaW5lcn0gZnJvbSBcIi4vcXVlcnktbGlzdC9xdWVyeS5jb250YWluZXJcIjtcblxuLy8gTGV0IFR5cGVTY3JpcHQga25vdyBhYm91dCB0aGUgc3BlY2lhbCBTeXN0ZW1KUyBfX21vZHVsZU5hbWUgdmFyaWFibGVcbmRlY2xhcmUgdmFyIF9fbW9kdWxlTmFtZTogc3RyaW5nO1xuLy8gbW9kdWxlTmFtZSBpcyBub3Qgc2V0IGluIHNvbWUgbW9kdWxlIGxvYWRlcnM7IHNldCBpdCBleHBsaWNpdGx5XG5pZiAoIV9fbW9kdWxlTmFtZSkge1xuICAgIF9fbW9kdWxlTmFtZSA9IGBodHRwOi8vJHtsb2NhdGlvbi5ob3N0fS8ke2xvY2F0aW9uLnBhdGhuYW1lfS9hcHAvYDtcbn1cbi8vY29uc29sZS5sb2coYFRoZSBfX21vZHVsZU5hbWUgaXMgJHtfX21vZHVsZU5hbWV9IGApO1xuQENvbXBvbmVudCh7XG4gICAgbW9kdWxlSWQ6IF9fbW9kdWxlTmFtZSxcbiAgICBzZWxlY3RvcjogJ215LWFwcCcsXG4gICAgdGVtcGxhdGU6IGBcbiAgICAgICAgICAgPG15LWluZGV4PkxvYWRpbmcuLi4uLjwvbXktaW5kZXg+XG4gICBgLFxuICAgIGRpcmVjdGl2ZXM6IFtST1VURVJfRElSRUNUSVZFUywgSW5kZXhDb21wb25lbnRdLFxuICAgIHByb3ZpZGVyczogW0RhdGFTZXJ2aWNlXSAvLyBjb21tb24gZm9yIERJTWFzdGVyQ29tcG9uZW50IGFuZCBIVFRQUmVzdE1hc3RlckNvbXBvbmVudFxuXG59KVxuXG5cbmV4cG9ydCBjb25zdCByb3V0ZXM6IFJvdXRlckNvbmZpZyA9IFtcbiAgICB7cGF0aDogJy9ob21lJywgbmFtZTogJ0Jvb3RzdHJhcC1TZWNvbmQnLCBjb21wb25lbnQ6IEJvb3RzdHJhcFNlY29uZENvbXBvbmVudCwgIHVzZUFzRGVmYXVsdDogdHJ1ZX0sXG4gICAge3BhdGg6ICcvcmVjaXBlcy8uLi4nLCBuYW1lOiAnUmVjaXBlcycsIGNvbXBvbmVudDogUmVjaXBlc0NvbXBvbmVudH0sXG4gICAge3BhdGg6ICcvc2hvcHBpbmctbGlzdCcsIG5hbWU6ICdTaG9wcGluZ0xpc3QnLCBjb21wb25lbnQ6IFNob3BwaW5nTGlzdENvbXBvbmVudH0sXG4gICAge3BhdGg6ICcvbXktZm9ybScsIG5hbWU6ICdNeS1mb3JtJywgY29tcG9uZW50OiBNeUZvcm1Db21wb25lbnR9LFxuICAgIHtwYXRoOiAnL2RpLWRlbW8nLCBuYW1lOiAnRGktRGVtbycsIGNvbXBvbmVudDogRElNYXN0ZXJDb21wb25lbnR9LFxuICAgIHtwYXRoOiAnL2RhdGEtZmxvdycsIG5hbWU6ICdEYXRhLWZsb3cnLCBjb21wb25lbnQ6IERhdGFGbG93TWFzdGVyQ29tcG9uZW50fSxcbiAgICB7cGF0aDogJy9odHRwLXJlc3QnLCBuYW1lOiAnSHR0cC1SZXN0JywgY29tcG9uZW50OiBIVFRQUmVzdE1hc3RlckNvbXBvbmVudH0sXG4gICAge3BhdGg6ICcvY29udGFjdC8uLi4nLCBuYW1lOiAnQ29udGFjdHMnLCBjb21wb25lbnQ6IENvbnRhY3RNYXN0ZXJDb21wb25lbnR9LFxuICAgIHtwYXRoOiAnL3N0cnVjdHVyYWwnLCBuYW1lOiAnU3RydWN0dXJhbCcsIGNvbXBvbmVudDogU3RydWN0dXJhbERpcmVjdGl2ZXNDb21wb25lbnR9LFxuICAgIHtwYXRoOiAnL2xpZmVjeWNsZScsIG5hbWU6ICdMaWZlY3ljbGUnLCBjb21wb25lbnQ6IExpZmVjeWNsZUNvbXBvbmVudH0sXG4gICAge3BhdGg6ICcvanF1ZXJ5JywgbmFtZTogJ0pRdWVyeScsIGNvbXBvbmVudDogSnF1ZXJ5Q29tcG9uZW50fSxcbiAgICB7cGF0aDogJy93aWtpLWh0dHAnLCBuYW1lOiAnV2lraS1IdHRwJywgY29tcG9uZW50OiBXaWtpSHR0cE1haW5Db21wb25lbnR9LFxuICAgIHtwYXRoOiAnL2hpZXJhcmNoaWNhbC1kZXBlbmRlbmN5LWluamVjdGlvbicsIG5hbWU6ICdIaWVyYXJjaGljYWwtRGVwZW5kZW5jeS1JbmplY3Rpb24nLCBjb21wb25lbnQ6IEhpZXJhcmNoaWNhbERlcGVuZGVuY3lJbmplY3Rpb25Db21wb25lbnR9LFxuICAgIHtwYXRoOiAnL3RlbXBsYXRlLXN5bnRheCcsIG5hbWU6ICdUZW1wbGF0ZS1TeW50YXgnLCBjb21wb25lbnQ6IFRlbXBsYXRlQXBwQ29tcG9uZW50fSxcbiAgICB7cGF0aDogJy9hdHRyaWJ1dGUtZGlyZWN0aXZlJywgbmFtZTogJ0F0dHJpYnV0ZS1EaXJlY3RpdmUnLCBjb21wb25lbnQ6IEF0dHJpYnV0ZURpcmVjdGl2ZUFwcENvbXBvbmVudH0sXG4gICAge3BhdGg6ICcvcngtanMnLCBuYW1lOiAnUngtSnMnLCBjb21wb25lbnQ6IFJYSlNDb21wb25lbnR9LFxuICAgIHtwYXRoOiAnL3BpcGUtZXhhbXBsZScsIG5hbWU6ICdQaXBlLUV4YW1wbGUnLCBjb21wb25lbnQ6IFBpcGVNYWluQ29tcG9uZW50fSxcbiAgICB7cGF0aDogJy9ib290c3RyYXAnLCBuYW1lOiAnQm9vdHN0cmFwJywgY29tcG9uZW50OiBCb290c3RyYXBNYWluQ29tcG9uZW50fSxcbiAgICB7cGF0aDogJy9ob3N0LWxpc3RlbmVyJywgbmFtZTogJ0hvc3RMaXN0ZW5lci1FeGFtcGxlJywgY29tcG9uZW50OiBIb3N0TGlzdGVuZXJDb21wb25lbnR9LFxuICAgIHtwYXRoOiAnL3F1ZXJ5YXBwJywgbmFtZTogJ1F1ZXJ5QXBwQ29tcG9uZW50JywgY29tcG9uZW50OiBRdWVyeUNvbnRhaW5lcn0sXG4gICAge3BhdGg6ICcvYm9vdHN0cmFwLXRoaXJkJywgbmFtZTogJ0Jvb3RzdHJhcC1UaGlyZCcsIGNvbXBvbmVudDogQm9vdHN0cmFwVGhpcmRDb21wb25lbnR9XG5cbl07XG5cbmV4cG9ydCBjb25zdCBBUFBfUk9VVEVSX1BST1ZJREVSUyA9IFtcbiAgICBwcm92aWRlUm91dGVyKHJvdXRlcylcbl07XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

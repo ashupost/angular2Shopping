@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {RecipeService} from './recipe.service';
 import {RecipeListComponent} from './recipe-list.component';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
