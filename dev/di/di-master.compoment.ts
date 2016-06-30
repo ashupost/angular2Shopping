@@ -1,7 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {DILevel1Component} from "./di-level1.compoment";
 import {DILevel2Component} from "./di-level2.compoment";
-import {DataService} from "./di-data.service";
 
 @Component({
     template: `

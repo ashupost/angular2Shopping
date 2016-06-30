@@ -1,4 +1,4 @@
-import {Component, ViewChildren, QueryList} from "angular2/core";
+import {Component, ViewChildren, QueryList} from "@angular/core";
 @Component({
      selector: 'child-cmp',
     template: '<p>child</p>'

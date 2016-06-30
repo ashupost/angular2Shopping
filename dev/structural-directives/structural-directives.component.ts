@@ -1,4 +1,4 @@
-import {Component, Input, Output} from 'angular2/core';
+import {Component, Input, Output} from '@angular/core';
 import {UnlessDirective} from "./unless.directive";
 import {HeavyLoaderComponent} from "./heavy-loader.component";
 

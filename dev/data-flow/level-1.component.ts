@@ -1,5 +1,5 @@
-import {Component, EventEmitter} from 'angular2/core';
-import {Output, Input} from 'angular2/core';
+import {Component, EventEmitter} from '@angular/core';
+import {Output, Input} from '@angular/core';
 import {Leve12Component} from './level-2.component';
 
 @Component({

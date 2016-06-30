@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RecipeService} from './recipe.service';
 import {Recipe} from '../shared/recipe';
-import {Router} from 'angular2/router';
+import {Router} from '@angular/router';
 
 @Component({
 	selector: 'my-recipe-list', // left side panel

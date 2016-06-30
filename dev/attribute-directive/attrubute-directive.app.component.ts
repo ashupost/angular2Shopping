@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {HighlightDirective} from './highlight.directive';
 import {AttributeDirectiveDescriptionComponent} from "./attrubute-description.component";
 

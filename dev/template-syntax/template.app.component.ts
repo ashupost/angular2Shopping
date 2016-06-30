@@ -1,5 +1,5 @@
 
-import {Component, AfterViewInit, ElementRef, OnInit, QueryList, ViewChildren} from 'angular2/core';
+import {Component, AfterViewInit, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {NgForm} from 'angular2/common';
 
 import {Hero} from './hero';

@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from "./di-data.service";
 @Component({
     selector: 'di-level2-component',

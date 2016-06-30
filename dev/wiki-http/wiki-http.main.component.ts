@@ -1,4 +1,4 @@
-import {Component}        from 'angular2/core';
+import {Component}        from '@angular/core';
 import {TohComponent} from "./toh.component";
 import {WikiComponent} from "./wiki.component";
 import {WikiSmartComponent} from "./wiki-smart.component";

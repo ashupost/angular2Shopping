@@ -1,5 +1,5 @@
-import {Component}        from 'angular2/core';
-import {JSONP_PROVIDERS}  from 'angular2/http';
+import {Component}        from '@angular/core';
+import {JSONP_PROVIDERS}  from '@angular/http';
 import {Observable}       from 'rxjs/Observable';
 import {Subject}          from 'rxjs/Subject';
 

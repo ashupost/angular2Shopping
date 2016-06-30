@@ -1,7 +1,7 @@
 import {
     Component, OnInit, AfterViewChecked, AfterViewInit, AfterContentChecked, AfterContentInit,
     OnChanges, DoCheck, OnDestroy
-} from 'angular2/core';
+} from '@angular/core';
 
 @Component({
 

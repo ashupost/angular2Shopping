@@ -1,7 +1,7 @@
-import {Component, ElementRef} from 'angular2/core';
+import {Component, ElementRef} from '@angular/core';
 declare var jQuery: any;
 declare var AdminLTE: any;
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
     selector: 'my-index',
     templateUrl: 'templates/index/index.component.html',

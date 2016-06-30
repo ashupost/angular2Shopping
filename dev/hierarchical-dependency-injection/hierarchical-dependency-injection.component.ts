@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {HeroesService} from './heroes.service';
 import {HeroesListComponent} from "./heroes-list.component";
 

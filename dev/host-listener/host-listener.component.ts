@@ -1,4 +1,4 @@
-import {Component, HostListener, Directive, EventEmitter, Output, Input} from "angular2/core";
+import {Component, HostListener, Directive, EventEmitter, Output, Input} from "@angular/core";
 
 @Directive({selector: 'button[counting]'})
 class CountClicks {

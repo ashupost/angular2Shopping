@@ -1,4 +1,4 @@
-import {Directive,  Output, ElementRef, EventEmitter} from 'angular2/core';
+import {Directive,  Output, ElementRef, EventEmitter} from '@angular/core';
 
 @Directive({selector:'[myClick]'})
 export class MyClickDirective {

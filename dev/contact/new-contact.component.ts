@@ -1,6 +1,6 @@
-import {Component, OnInit} from 'angular2/core';
-import {ControlGroup, FormBuilder, Validator, Validators} from "angular2/common";
-import {Router, RouteParams} from "angular2/router";
+import {Component, OnInit} from '@angular/core';
+import {ControlGroup, FormBuilder, Validator, Validators} from "@angular/common";
+import {Router, RouteParams} from "@angular/router";
 import {ContactDataService} from "./contact.service";
 
 @Component({

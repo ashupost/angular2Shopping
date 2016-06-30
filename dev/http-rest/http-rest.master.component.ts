@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {HTTPRestDataService} from "./http-rest.data.service";
 import {DataService} from "../di/di-data.service";
 import {DILevel2Component} from "../di/di-level2.compoment";

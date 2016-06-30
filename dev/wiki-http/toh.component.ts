@@ -1,17 +1,17 @@
 
-import { Component }         from 'angular2/core';
-import { HTTP_PROVIDERS }    from 'angular2/http';
+import { Component }         from '@angular/core';
+import { HTTP_PROVIDERS }    from '@angular/http';
 
 import { HeroListComponent } from './hero-list.component';
 import { HeroService }       from './hero.service';
 
-import { provide }           from 'angular2/core';
-import { XHRBackend }        from 'angular2/http';
+import { provide }           from '@angular/core';
 
-// in-memory web api imports
-import { InMemoryBackendService,
-    SEED_DATA }         from 'a2-in-memory-web-api/core';
+// Imports for loading & configuring the in-memory web api
+import { XHRBackend } from '@angular/http';
+
 import { HeroData }          from './hero-data';
+import {InMemoryBackendService} from "angular2-in-memory-web-api/index";
 
 @Component({
     selector: 'my-toh',
@@ -22,10 +22,8 @@ import { HeroData }          from './hero-data';
     directives: [HeroListComponent],
     providers:  [
         HTTP_PROVIDERS,
-        HeroService,
-        // in-memory web api providers
-        provide(XHRBackend, { useClass: InMemoryBackendService }), // in-mem server
-        provide(SEED_DATA,  { useClass: HeroData }) // in-mem server data
+        HeroService
+
     ]
 })
 export class TohComponent { }

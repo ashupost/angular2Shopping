@@ -7,8 +7,8 @@ import {
     AfterViewInit,
     AfterViewChecked,
     OnDestroy
-} from 'angular2/core';
-import {Component, Input, Output} from 'angular2/core';
+} from '@angular/core';
+import {Component, Input, Output} from '@angular/core';
 import {LoggerService}            from './logger.service';
 
 let nextId = 1;

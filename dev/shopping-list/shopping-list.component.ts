@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit} from '@angular/core';
 import {ShoppingListEditComponent} from './shopping-list-edit.component';
 import {ShoppingListService} from '../shared/shopping-list.service';
 import {Ingredient} from '../shared/ingredient';

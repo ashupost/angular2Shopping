@@ -1,7 +1,7 @@
 import {
     Component, Input, Output,
     OnChanges, SimpleChange,
-} from 'angular2/core';
+} from '@angular/core';
 
 import {Spy} from './spy.directive';
 import {LoggerService}  from './logger.service';

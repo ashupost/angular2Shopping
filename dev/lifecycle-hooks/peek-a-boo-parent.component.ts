@@ -1,4 +1,4 @@
-import {Component}         from 'angular2/core';
+import {Component}         from '@angular/core';
 import {PeekABooComponent} from './peek-a-boo.component'
 import {LoggerService}  from './logger.service';
 

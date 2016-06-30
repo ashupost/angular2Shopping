@@ -1,7 +1,7 @@
 import {
     Component, Input, ViewChild,
     OnChanges, SimpleChange
-} from 'angular2/core';
+} from '@angular/core';
 
 
 class Hero {

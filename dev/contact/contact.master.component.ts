@@ -1,7 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-import {NewContactComponent} from "./new-contact.component";
-import {OldContactComponent} from "./old-contact.component";
+import {Component} from '@angular/core';
+import { ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     template: `
@@ -20,10 +18,6 @@ import {OldContactComponent} from "./old-contact.component";
     directives: [ROUTER_DIRECTIVES],
     styleUrls: ['src/css/app.css']
 })
-@RouteConfig([
-	{path: '/con', name: 'MainContacts', component: OldContactComponent, useAsDefault: true},
-	{path: '/new', name: 'Newcontacts', component: NewContactComponent}
 
-])
 export class ContactMasterComponent {
 }

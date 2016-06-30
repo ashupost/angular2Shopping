@@ -1,7 +1,7 @@
 import {
     Component, Query, QueryList, ViewChildren, AfterViewInit, ViewChild, ContentChild,
     AfterContentInit, Directive, ContentChildren
-} from 'angular2/core';
+} from '@angular/core';
 import {ViewChildrenComponent} from "./view-children.component";
 
 @Directive({
