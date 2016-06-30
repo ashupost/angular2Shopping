@@ -25,11 +25,6 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
                 function IndexComponent(_elRef) {
                     this._elRef = _elRef;
                 }
-                IndexComponent.prototype.ngOnInit = function () {
-                    console.log(jQuery());
-                    console.log($.AdminLTE.options);
-                    // console.log($.AdminLTE.layout.fix());
-                };
                 IndexComponent = __decorate([
                     core_1.Component({
                         selector: 'my-index',
@@ -44,5 +39,4 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
         }
     }
 });
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4L2luZGV4LmNvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztZQVVBO2dCQUVDLHdCQUFvQixNQUFrQjtvQkFBbEIsV0FBTSxHQUFOLE1BQU0sQ0FBWTtnQkFFbkMsQ0FBQztnQkFFSixpQ0FBUSxHQUFSO29CQUVHLE9BQU8sQ0FBQyxHQUFHLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQztvQkFFdEIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLE9BQU8sQ0FBQyxDQUFDO29CQUVqQyx3Q0FBd0M7Z0JBRzNDLENBQUM7Z0JBckJEO29CQUFDLGdCQUFTLENBQUM7d0JBQ1AsUUFBUSxFQUFFLFVBQVU7d0JBQ3BCLFdBQVcsRUFBRSxzQ0FBc0M7d0JBQ25ELFVBQVUsRUFBRSxDQUFDLDBCQUFpQixDQUFDO3FCQUVsQyxDQUFDOztrQ0FBQTtnQkFtQkYscUJBQUM7WUFBRCxDQWxCQSxBQWtCQyxJQUFBO1lBbEJELDJDQWtCQyxDQUFBIiwiZmlsZSI6ImluZGV4L2luZGV4LmNvbXBvbmVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50LCBFbGVtZW50UmVmfSBmcm9tICdhbmd1bGFyMi9jb3JlJztcclxuZGVjbGFyZSB2YXIgalF1ZXJ5OiBhbnk7XHJcbmRlY2xhcmUgdmFyIEFkbWluTFRFOiBhbnk7XHJcbmltcG9ydCB7Uk9VVEVSX0RJUkVDVElWRVN9IGZyb20gJ2FuZ3VsYXIyL3JvdXRlcic7XHJcbkBDb21wb25lbnQoe1xyXG4gICAgc2VsZWN0b3I6ICdteS1pbmRleCcsXHJcbiAgICB0ZW1wbGF0ZVVybDogJ3RlbXBsYXRlcy9pbmRleC9pbmRleC5jb21wb25lbnQuaHRtbCcsXHJcbiAgICBkaXJlY3RpdmVzOiBbUk9VVEVSX0RJUkVDVElWRVNdXHJcblxyXG59KVxyXG5leHBvcnQgY2xhc3MgSW5kZXhDb21wb25lbnQgaW1wbGVtZW50cyBPbkluaXR7XHJcblxyXG4gY29uc3RydWN0b3IocHJpdmF0ZSBfZWxSZWY6IEVsZW1lbnRSZWYpe1xyXG5cclxuICAgIH1cclxuXHJcbiBuZ09uSW5pdCgpOiBhbnl7XHJcblxyXG4gICAgY29uc29sZS5sb2coalF1ZXJ5KCkpO1xyXG5cclxuICAgIGNvbnNvbGUubG9nKCQuQWRtaW5MVEUub3B0aW9ucyk7XHJcblxyXG4gICAvLyBjb25zb2xlLmxvZygkLkFkbWluTFRFLmxheW91dC5maXgoKSk7XHJcblxyXG4gICAgICAgXHJcbn1cclxuXHJcblxyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+//# sourceMappingURL=index.component.js.map

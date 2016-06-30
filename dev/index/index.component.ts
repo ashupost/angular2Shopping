@@ -8,22 +8,12 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
     directives: [ROUTER_DIRECTIVES]
 
 })
-export class IndexComponent implements OnInit{
+export class IndexComponent{
 
  constructor(private _elRef: ElementRef){
 
     }
 
- ngOnInit(): any{
 
-    console.log(jQuery());
-
-    console.log($.AdminLTE.options);
-
-   // console.log($.AdminLTE.layout.fix());
-
-       
-}
-
-
+     
 }
